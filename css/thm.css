@@ -1,0 +1,39 @@
+p,h1,h2,h3,label {
+    font-family: "ConcertOne";
+}
+p {
+    font-family: "ConcertOne";
+}
+
+.centerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/** FONT COLLECTION */
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf")
+}
+
+@font-face{
+    font-family: "Futura_Black";
+    src: url("../fonts/FuturaBlack/FuturaBlack.ttf")
+}
+
+@font-face{
+    font-family: "ConcertOne";
+    src: url("../fonts/ConcertOne-Regular.ttf")
+}
+
+@font-face{
+    font-family: "FredokaOne";
+    src: url("../fonts/FredokaOne-Regular.ttf")
+}
+
+@font-face{
+    font-family: "SyneMono";
+    src: url("../fonts/SyneMono-Regular.ttf")
+}
