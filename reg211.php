@@ -197,7 +197,7 @@
                 </div>
             </div>
             <div  class="form-row mt-2">
-                <button type="submit" name="btn_insert" class="btn btn-primary">Insert Data</button>
+                <button type="submit" name="btn_insert" class="btn btn-success">Save</button>
                 <button type="Reset" class="btn btn-danger">Reset Data</button>
             </div>
         </form>
