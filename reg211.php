@@ -15,7 +15,7 @@
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">Request Form for Maintaining Student Status</p>
 
         <!-- START FORM -->
-        <form action="" method="POST" style="font-family:ConcertOne;">
+        <form action="insert_form.php" method="POST" style="font-family:ConcertOne;">
             <!-- TOP PART -->
             <div class="form-row mt-5">
                 <div class="form-group col-12">
@@ -138,7 +138,7 @@
             <div class="form-row">
                 <div class="form-group col-12 col-sm-4">
                     <label for="std_lastname">Current Address</label>
-                    <input type="text" class="form-control" name="std_subdistrict" id="std_address" placeholder="221 Baker Street, Soi 5">
+                    <input type="text" class="form-control" name="std_address" id="std_address" placeholder="221 Baker Street, Soi 5">
                 </div>
                 <div class="form-group col-6  col-sm-4">
                     <label for="std_lastname">Subdistrict</label>
@@ -192,8 +192,8 @@
             </div>
             <div class="form-row mt-2">
                 <div class="form-group col-12">
-                    <label for="std_phone">Reason</label>
-                    <input type="tel" class="form-control" name="std_phone" id="std_phone" placeholder="">
+                    <label for="std_reason">Reason</label>
+                    <input type="tel" class="form-control" name="std_reason" id="std_reason" placeholder="">
                 </div>
             </div>
 
