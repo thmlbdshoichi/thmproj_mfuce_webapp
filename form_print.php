@@ -19,7 +19,7 @@
     <?php
     // Include database connection file
     require_once "connectdb.php";
-    /*$em_id = $_GET['em_id'];*/
+    /*$form_id = $_GET['form_id'];*/
     $sql = " SELECT * FROM input_form WHERE FORM_NO = '5' ";
     $result = mysqli_query($conn, $sql);
     ?>
