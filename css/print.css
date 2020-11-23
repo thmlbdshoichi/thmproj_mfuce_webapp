@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro&display=swap");
+body {
+  font-family: "Castoro", serif;
+  margin: 0;
+  padding: 0;
+}
+p.text-center,
+h6,
+#firstsemester,
+#secondsemester,
+#summersemester,
+#Academicyear,
+#semester,
+#bold {
+  font-weight: bold;
+}
+div.container-inner {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+th {
+  width: 100px;
+  height: 100%;
+  font-family: sans-serif;
+}
+table,
+.center {
+  text-align: center;
+}
+.headbox {
+  padding: 20px;
+  border: 2px solid black;
+  height: 200px;
+  width: 250px;
+}
+.part2,
+.part4 {
+  padding-top: 5px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  height: 230px;
+}
+.part3,
+.part5 {
+  padding-top: 5px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  height: 230px;
+}
+.part4 {
+  border-bottom: 3px solid black;
+}
+.part5 {
+  border-bottom: 3px solid black;
+}
+.column3 {
+  text-align: right;
+  float: left;
+  width: 30%;
+}
+.column2 {
+  text-align: center;
+  float: left;
+  width: 70%;
+}
+.column1 {
+  float: left;
+  width: 100%;
+}
+div.form-group, div.form-check{
+    
+    position: relative;
+}/*
+    border-bottom: rgb(7, 7, 7) 2px dotted;
+    background-color: violet;
+    margin: 0 auto;
+   
+
+    
+}*/
+.mat1{
+    bottom: -1em;
+    position: absolute;
+    width: 100%;
+}
+.box{
+    width: 100%;
+    position: absolute;
+}
+
+.mat{
+    width: 100%;
+    bottom: -12px;
+    position: absolute;
+    
+}
+.box-dote{
+    width: 100%;
+    border-bottom: 2px dotted rgb(70, 67, 67);
+    position: absolute;
+}
+div.col-12,
+.col-8 {
+  text-align: center;
+}
+input[type="text"] {
+  width: 60%;
+  border: 2.5px dotted black;
+}
+.test2 {
+  border: orchid dotted;
+  background-color: blanchedalmond;
+}
+
+.test {
+  margin-bottom: -1px;
+  border-bottom: solid 2px black;
+}
+@media print {
+  body {
+    font-size: 12pt;
+    font-family: "Castoro", serif;
+    color: black;
+  }
+  .print {
+    display: none;
+  }
+}
