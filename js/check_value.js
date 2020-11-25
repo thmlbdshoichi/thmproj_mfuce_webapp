@@ -1,74 +1,66 @@
 function fncSubmit() {
-    if (document.getElementById('firstsemester').checked == false) {
-        alert('PLEASE CHECK IN BOX');
+    if (document.getElementById('firstsemester').checked == false && document.getElementById('secondsemester').checked == false && document.getElementById('summersemester').checked == false) {
+        alert('Warning: Do not forget to check semester.');
         return false;
     }
     if (document.getElementById('academicyear').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Please Insert your academic year.');
         return false;
     }
     if (document.getElementById('date').value == "") {
-        alert('PLEASE INPUT DATE');
+        alert('Warning: Please Select Date');
         return false;
     }
-    if (document.getElementById('dean_school').value == "") {
-        alert('PLEASE SELECT SCHOOL');
+    if (document.getElementById('dean_school').value == "" || document.getElementById('std_school').value == "") {
+        alert('Warning: Please Select School');
         return false;
     }
     if (document.getElementById('std_id').value == "") {
-        alert('PLEASE INPUT YOURV STUDENT ID');
+        alert('Error: Unknow Identity, Please insert your Student ID');
         return false;
     }
     if (document.getElementById('std_level').value == "") {
-        alert('PLEASE SELECT LEVEL');
+        alert('Warning: Please Choose your Student Level');
         return false;
     }
     if (document.getElementById('std_prefix').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Please specify your prefix');
         return false;
     }
     if (document.getElementById('std_firstname').value == "") {
-        alert('PLEASE INPUT YOUR NAME');
+        alert('Error: Unknow Identity, Please insert your name');
         return false;
     }
     if (document.getElementById('std_lastname').value == "") {
-        alert('PLEASE INPUT YOUR LASTNAME');
+        alert('Error: Unknow Identity, Please insert your lastname');
         return false;
     }
-    if (document.getElementById('std_school').value == "") {
-        alert('PLEASE SELECT SCHOOL');
-        return false;
-    }if (document.getElementById('std_program').value == "") {
-        alert('PLEASE INPUT YOUR PROGRAM');
+    if (document.getElementById('std_program').value == "") {
+        alert('Waring: Please Select your Program');
         return false;
     }
     if (document.getElementById('std_address').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Unknown Address');
         return false;
     }
     if (document.getElementById('std_subdistrict').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Unknown Subdistrict');
         return false;
     }
     if (document.getElementById('std_district').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Unknown District');
         return false;
     }
     if (document.getElementById('std_province').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Unknown Province');
         return false;
     }
     if (document.getElementById('std_postcode').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Unknown Postcode');
         return false;
     }
     if (document.getElementById('std_phone').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
+        alert('Warning: Unknown Phone');
         return false;
     }
-    if (document.getElementById('std_province').value == "") {
-        alert('PLEASE INPUT YOURTEXT');
-        return false;
-    }
-
 }
