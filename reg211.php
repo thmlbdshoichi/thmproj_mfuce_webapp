@@ -95,9 +95,9 @@
                 <div class="form-group col-sm-2">
                     <label for="std_prefix">Prefix</label>
                     <select name="std_prefix" id="std_prefix" class="form-control">
-                        <option value="MR.">Mr</option>
-                        <option value="MISS">Miss</option>
-                        <option value="MRS.">Mrs</option>
+                        <option value="Mr.">Mr</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Mrs.">Mrs</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-5">
@@ -171,7 +171,7 @@
 
             <div class="form-row">
                 <div class="form-check form-check-inline mr-1">
-                    <input class="form-check-input" type="radio" name="std_reason" id="std_reason_inprogess" value="In progess">
+                    <input class="form-check-input" type="radio" name="std_process" id="std_reason_inprogess" value="In progess">
                     <label class="form-check-label" for="std_reason_inprogess">Receiving a P grade (In Progress)</label>
                 </div>
             </div>
@@ -207,5 +207,4 @@
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

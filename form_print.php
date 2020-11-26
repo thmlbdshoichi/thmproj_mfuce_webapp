@@ -42,8 +42,10 @@
         $std_province = $row['PROVINCE'];
         $std_postcode = $row['POST_NO'];
         $std_phone = $row['PHONE_NUMBER'];
+        $std_inprocess = $row['IN_PROCESS'];
         $course_code = $row['COURSE_CODE'];
         $course_title = $row['COURSE_TITLE'];
+        $std_otherreason = $row['OTHER_REASON'];
         $std_reason = $row['REASON'];
     }
     ?>
@@ -58,21 +60,25 @@
             <!-- Top -->
             <div class="row">
                 <div class="headbox col-4">
-                    <label for="" id="bold">School of................................................</label><br>
-                    <label for="" style="font-weight: bold; text-indent: 4em;">Mae Fah Luang University</label><br>
-                    <label for="">No..........................................................</label><br>
-                    <label for="">Date.......................................................</label><br>
-                    <label for="">Time..................Recoded by...................</label>
+                    <p style="margin-top: 1px;"><label for="" id="bold">School of</label><span><label for="" id="bold" class="dote"></label></span></p>
+                    <p><label for="" style="font-weight: bold; text-indent: 4em;">Mae Fah Luang University</label><br></p>
+                    <p><label for="">No</label><span><label for="" class="dote"></label></span></p>
+                    <p><label for="">Date</label><span><label for="" class="dote"></label></span></p>
+                    <div class="row mt-2"></div>
+                    <p><label for="" style="margin-top: -11px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
+                    <p><label for="" style="margin-top: -11px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
                 </div>
                 <div class="col-4">
                     <img src="img/mfulogo.png" style="width:auto; height:8rem;" class="mx-auto d-block mb-2 mt-5">
                 </div>
                 <div class="headbox col-4">
-                    <label for="" style="font-weight: bold; text-indent: 4em;">The Division of Registrar</label><br>
-                    <label for="" style="font-weight: bold; text-indent: 4em;">Mae Fah Luang University</label><br>
-                    <label for="">No..........................................................</label><br>
-                    <label for="">Date.......................................................</label><br>
-                    <label for="">Time..................Recoded by...................</label>
+                    <p><label for="" style="font-weight: bold; text-indent: 4em;">The Division of Registrar</label><br></p>
+                    <p><label for="" style="font-weight: bold; text-indent: 4em;">Mae Fah Luang University</label><br></p>
+                    <p><label for="">No</label><span><label for="" class="dote"></label></span></p>
+                    <p> <label for="">Date</label><span><label for="" class="dote"></label></span></p>
+                    <div class="row mt-2"></div>
+                    <p><label for="" style="margin-top: -11px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
+                    <p><label for="" style="margin-top: -11px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
                 </div>
             </div>
             <!-- Top -->
@@ -85,8 +91,8 @@
                 <div class="form-group col-8">
                     <div class="box">
                         <div class="mat1" style="text-align: right;">
-                            <label class="mr-4" id="semester">Semester </label>
                             <div class="form-check form-check-inline mr-4">
+                                <label class="indent mr-3" id="semester">Semester </label>
                                 <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="firstsemester" value="First">
                                 <label class="form-check-label" for="firstsemester" id="firstsemester">First</label></div>
                             <div class="form-check form-check-inline mr-4">
@@ -95,14 +101,14 @@
                             <div class="form-check form-check-inline mr-4">
                                 <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="summersemester" value="Summer">
                                 <label class="form-check-label" for="summersemester" id="summersemester">Summer</label></div>
-                            <label class="mb-2" for="Academicyear" id="Academicyear">Academic year </label>
+                            <label class=" indent mb-2" for="Academicyear" id="Academicyear">Academic year </label>
                         </div>
                     </div>
                 </div>
                 <div class="form-group col-1">
                     <div class="box-dote">
                         <div class="mat">
-                            <label for="" style="text-indent: 2em;"><?= $academicyear ?></label>
+                            <label for="" style="text-indent: 30px;"><?= $academicyear ?></label>
                         </div>
                     </div>
                 </div>
@@ -138,11 +144,11 @@
                     <div class="box">
                         <div class="mat1">
                             <div class="form-check form-check-inline mr-1">
-                                <input class="form-check-input" type="checkbox" name="std_reason" id="std_reason_other" value="Other Reason">
+                                <input class="form-check-input" type="checkbox" name="std_reason" id="std_level_undergrad" value="Other Reason">
                                 <label class="form-check-label" for="std_reason_other">Undergraduate student</label>
                             </div>
                             <div class="form-check form-check-inline mr-1">
-                                <input class="form-check-input" type="checkbox" name="std_reason" id="std_reason_other" value="Other Reason">
+                                <input class="form-check-input" type="checkbox" name="std_reason" id="std_level_grad" value="Other Reason">
                                 <label class="form-check-label" for="std_reason_other">Graduate student</label>
                             </div>
                         </div>
@@ -381,13 +387,13 @@
             </div>
             <div class="row mt-4"></div>
             <div class="form-row">
-                <div class="form-group col-3">
+                <div class="form-group col-2">
                     <!-- blank -->
                 </div>
-                <div class="form-group col-9">
+                <div class="form-group col-10">
                     <div class="box-dote">
                         <div class="mat">
-                            <label for=""><?= $std_reason ?></label>
+                            <label for="" style="text-indent: 1em;"><?= $std_reason ?></label>
                         </div>
                     </div>
                 </div>
@@ -401,25 +407,27 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-4">
+                <div class="form-group col-6" style="text-align: right;">
+                    <label for="" class="indent">Student's Signature </label>
                 </div>
+                <div class="form-group col-6 style=" text-align: left;">
+                    <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                </div>
+                <div class="form-group col-6" style="text-align: left; text-indent: 3px;">
+                    <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-8">
-                    <label for="">Student's Signature </label>
-                    <label for="" style="text-indent: 4em;"> ............................................</label>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-6 center">
-                </div>
-                <div class="form-group col-6 center">
-                    <label for=""> (.........................................)</label>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-6 center">
-                </div>
-                <div class="form-group col-6 center">
-                    <label for=""> ........../ ........../ ...........</label>
+                <div class="form-group col-4" style="text-align: left;">
+                    <center>
+                        <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                    </center>
                 </div>
             </div>
             <!-- END PART 1 -->
@@ -430,30 +438,35 @@
                     <h6>(2) Advisor's Comment</h6>
                     <div class="column3">
                         <br><br><br><br>
-                        <label for="">Signature</label>
+                        <label for="" class="indent">Signature</label>
                     </div>
                     <div class="column2">
-                        <label for="">.................................................................</label>
-                        <label for="">.................................................................</label>
-                        <label for="">.................................................................</label>
-                        <label for="">.........................................</label><br>
-                        <label for="">(.......................................)</label><br>
-                        <label for="">......../ ......../ .......</label>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
+
+                    </div>
+                    <div class="column2">
+                        <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
                     </div>
                 </div>
                 <div class="part3 col-6">
                     <h6>(3) Dean's Comment</h6>
                     <div class="column3">
                         <br><br><br><br>
-                        <label for="">Signature</label>
+                        <label for="" class="indent">Signature</label>
                     </div>
                     <div class="column2">
-                        <label for="">.................................................................</label>
-                        <label for="">.................................................................</label>
-                        <label for="">.................................................................</label>
-                        <label for="">..........................................</label><br>
-                        <label for="">(........................................)</label><br>
-                        <label for="">......../ ......../ .......</label>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
+                        <center>
+                            <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                        </center>
                     </div>
                 </div>
             </div>
@@ -480,27 +493,29 @@
                         </div>
                     </div>
                     <div class="column3">
-                        <label for="">Signature</label>
+                        <label for="" class="indent">Signature</label>
                     </div>
                     <div class="column2">
-                        <label for="">.........................................</label><br>
-                        <label for="">(.......................................)</label><br>
-                        <label for="">......../ ......../ .......</label>
+                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
+                        <center>
+                            <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                        </center>
                     </div>
                 </div>
                 <div class="part5 col-6">
                     <h6>(5) Head of Division of Registrar's Comment</h6>
                     <div class="column3">
                         <br><br><br><br>
-                        <label for="">Signature</label>
+                        <label for="" class="indent">Signature</label>
                     </div>
                     <div class="column2">
-                        <label for="">.................................................................</label>
-                        <label for="">.................................................................</label>
-                        <label for="">.................................................................</label>
-                        <label for="">.........................................</label><br>
-                        <label for="">( Mr. Ruangsak Kiengkamon )</label><br>
-                        <label for="">......../ ......../ .......</label>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <span style="padding:8px;"><label for="" class="dote"></label></span>
+                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
+                        <p style="text-align: center;"><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
                     </div>
                 </div>
             </div>
@@ -514,6 +529,7 @@
     </class>
     <!-- Function checked box-->
     <script>
+        /*  Checked box semester */
         let semester = "<?php print $semester ?>";
         if (semester == "First") {
             document.getElementById("firstsemester").checked = true;
@@ -523,6 +539,30 @@
             document.getElementById("summersemester").checked = true;
         } else {
             document.getElementById("summersemester").checked = true;
+        }
+
+        /*  Checked box Student level*/
+        let std_level = "<?php print $std_level ?>";
+        if (std_level == "Undergraduate Student") {
+            document.getElementById("std_level_undergrad").checked = true;
+        } else if (std_level == "Graduate Student") {
+            document.getElementById("std_level_grad").checked = true;
+        }
+
+        /*  Checked box Student In process */
+        let prcess = "<?php print $std_inprocess ?>";
+        if (prcess == "In progess") {
+            document.getElementById("std_reason_inprogess").checked = true;
+        } else {
+            document.getElementById("std_reason_inprogess").checked = false;
+        }
+
+        /*  Checked box Student other reason */
+        let reason = "<?php print $std_otherreason ?>";
+        if (reason == "Other Reason") {
+            document.getElementById("std_reason_other").checked = true;
+        } else {
+            document.getElementById("std_reason_other").checked = false;
         }
     </script>
     <script src="js/jquery.slim.min.js"></script>

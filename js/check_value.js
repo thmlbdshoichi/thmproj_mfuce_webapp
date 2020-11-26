@@ -1,8 +1,4 @@
 function fncSubmit() {
-    if (document.getElementById('firstsemester').checked == false) {
-        alert('PLEASE CHECK IN BOX');
-        return false;
-    }
     if (document.getElementById('academicyear').value == "") {
         alert('PLEASE INPUT YOURTEXT');
         return false;

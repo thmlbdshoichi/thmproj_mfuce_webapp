@@ -4,6 +4,9 @@ body {
   margin: 0;
   padding: 0;
 }
+* {
+  box-sizing: border-box;
+}
 p.text-center,
 h6,
 #firstsemester,
@@ -13,6 +16,10 @@ h6,
 #semester,
 #bold {
   font-weight: bold;
+}
+p {
+  padding-top: -8px;
+  margin: 8px;
 }
 div.container-inner {
   padding-left: 5%;
@@ -67,46 +74,56 @@ table,
 .column1 {
   float: left;
   width: 100%;
-}
-div.form-group, div.form-check{
-    
-    position: relative;
-}/*
-    border-bottom: rgb(7, 7, 7) 2px dotted;
-    background-color: violet;
-    margin: 0 auto;
-   
 
-    
-}*/
-.mat1{
-    bottom: -1em;
-    position: absolute;
-    width: 100%;
 }
-.box{
-    width: 100%;
-    position: absolute;
+div.form-group,
+div.form-check {
+  position: relative;
+}
+.mat1 {
+  bottom: -1em;
+  position: absolute;
+  width: 100%;
+}
+.box {
+  width: 100%;
+  position: absolute;
+}
+.mat {
+  width: 100%;
+  bottom: -12px;
+  position: absolute;
+}
+.box-dote {
+  width: 100%;
+  border-bottom: 1px dotted rgb(70, 67, 67);
+  position: absolute;
 }
 
-.mat{
-    width: 100%;
-    bottom: -12px;
-    position: absolute;
-    
+label { 
+  float: left; 
+} 
+.indent{
+  float: right; 
 }
-.box-dote{
-    width: 100%;
-    border-bottom: 2px dotted rgb(70, 67, 67);
-    position: absolute;
+
+span { 
+  display: block;
+  overflow: hidden; 
+  padding: 8px 5px 0px 2px; 
+} 
+.dote {
+  width: 100%;
+  height: 8px;
+  border-bottom: 1px dotted rgb(70, 67, 67);
 }
-div.col-12,
-.col-8 {
+div.col-12 {
   text-align: center;
 }
 input[type="text"] {
-  width: 60%;
-  border: 2.5px dotted black;
+  width: 70%;
+  height: 12px;
+  border-bottom: 1px dotted rgb(70, 67, 67);
 }
 .test2 {
   border: orchid dotted;
@@ -115,7 +132,7 @@ input[type="text"] {
 
 .test {
   margin-bottom: -1px;
-  border-bottom: solid 2px black;
+  border-bottom: solid 1px black;
 }
 @media print {
   body {
