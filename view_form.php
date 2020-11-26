@@ -14,7 +14,7 @@
         require_once "connectdb.php";
         $FORM_NO = $_GET['did'];
 
-        $sql_selectall = "SELECT * FROM input_form WHERE FORM_NO = 26";
+        $sql_selectall = "SELECT * FROM input_form WHERE FORM_NO = $FORM_NO";
     
         $result_selectall = mysqli_query($conn,$sql_selectall);
 

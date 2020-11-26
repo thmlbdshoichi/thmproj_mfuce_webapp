@@ -20,33 +20,32 @@
     // Include database connection file
     require_once "connectdb.php";
     /*$form_id = $_GET['form_id'];*/
-    $sql = " SELECT * FROM input_form WHERE FORM_NO = '5' ";
+    $sql = " SELECT * FROM input_form WHERE FORM_NO = '26' ";
     $result = mysqli_query($conn, $sql);
     ?>
     <?php
     while ($row = mysqli_fetch_assoc($result)) {
-        $semester = $row['SEMESTER'];
+        $semester = $row["SEMESTER"];
         $date = $row['DATE'];
-        $academicyear = $row['ACADEMIC_YEAR'];
-        $dean_of = $row['DEAN'];
-        $std_id = $row['ST_ID'];
-        $std_level = $row['ST_LEVEL'];
-        $std_prefix = $row['PREFIX'];
-        $std_firstname = $row['FIRST_NAME'];
-        $std_lastname = $row['LAST_NAME'];
-        $std_school = $row['SCHOOL'];
-        $std_program = $row['PROGRAM'];
+        $academicyear = $row["ACADEMIC_YEAR"];
+        $dean_of = $row["DEAN"];
+        $std_id = $row["ST_ID"];
+        $std_level = $row["ST_LEVEL"];
+        $std_prefix = $row["PREFIX"];
+        $std_firstname = $row["FIRST_NAME"];
+        $std_lastname =  $row["LAST_NAME"];
+        $std_school = $row["SCHOOL"];
+        $std_program = $row["PROGRAM"];
         $std_address = $row['CURRENT_ADD'];
         $std_subdistrict = $row['SUBDISTRICT'];
         $std_district = $row['DISTRICT'];
         $std_province = $row['PROVINCE'];
         $std_postcode = $row['POST_NO'];
         $std_phone = $row['PHONE_NUMBER'];
-        $std_inprocess = $row['IN_PROCESS'];
         $course_code = $row['COURSE_CODE'];
         $course_title = $row['COURSE_TITLE'];
-        $std_otherreason = $row['OTHER_REASON'];
-        $std_reason = $row['REASON'];
+        $other_explain = $row["OTHER_EXPLAIN"];
+        $std_reason = $row["REASONS"];
     }
     ?>
     <class class="container">
@@ -54,7 +53,7 @@
         <div class="row mt-3"></div>
         <div class="container-inner">
 
-            <div style="height: 80px; ">
+            <div style="height: 50px; ">
                 <h6 style="font-weight: bold; text-align: right;">REG-211</h6>
             </div>
             <!-- Top -->
@@ -65,11 +64,11 @@
                     <p><label for="">No</label><span><label for="" class="dote"></label></span></p>
                     <p><label for="">Date</label><span><label for="" class="dote"></label></span></p>
                     <div class="row mt-2"></div>
-                    <p><label for="" style="margin-top: -11px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
-                    <p><label for="" style="margin-top: -11px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
+                    <p><label for="" style="margin-top: -10px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
+                    <p><label for="" style="margin-top: -10px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
                 </div>
                 <div class="col-4">
-                    <img src="img/mfulogo.png" style="width:auto; height:8rem;" class="mx-auto d-block mb-2 mt-5">
+                    <img src="img/mfulogo.png" style="width:auto; height:10rem;" class="mx-auto d-block mb-2 mt-5">
                 </div>
                 <div class="headbox col-4">
                     <p><label for="" style="font-weight: bold; text-indent: 4em;">The Division of Registrar</label><br></p>
@@ -77,8 +76,8 @@
                     <p><label for="">No</label><span><label for="" class="dote"></label></span></p>
                     <p> <label for="">Date</label><span><label for="" class="dote"></label></span></p>
                     <div class="row mt-2"></div>
-                    <p><label for="" style="margin-top: -11px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
-                    <p><label for="" style="margin-top: -11px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
+                    <p><label for="" style="margin-top: -10px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
+                    <p><label for="" style="margin-top: -10px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
                 </div>
             </div>
             <!-- Top -->
@@ -325,11 +324,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row mt-3"></div>
             <div class="form-row">
                 <div class="col-10">
                     <label for="">Reason(s) for maintaining student status are</label>
                 </div>
             </div>
+            <div class="row mt-2"></div>
             <div class="form-row">
                 <div class="form-group col-2">
                     <!-- blank -->
@@ -358,16 +359,16 @@
             </div>
             <div class="row mt-4"></div>
             <div class="form-row">
-                <div class="form-group col-2">
+                <div class="form-group col-1">
                 </div>
                 <div class="form-group col-2">
                     <div class="box">
                         <div class="mat1">
-                            <label for="" style="text-indent: 2em;">Course Title</label>
+                            <label for="" style="float:right">Course Title</label>
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-8">
+                <div class="form-group col-9">
                     <div class="box-dote">
                         <div class="mat">
                             <label for="" style="text-indent: 1em;"><?= $course_title ?></label>
@@ -375,7 +376,7 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row mt-2"></div>
             <div class="form-row">
                 <div class="form-group col-2">
                     <!-- blank -->
@@ -393,7 +394,7 @@
                 <div class="form-group col-10">
                     <div class="box-dote">
                         <div class="mat">
-                            <label for="" style="text-indent: 1em;"><?= $std_reason ?></label>
+                            <label for="" style="text-indent: 1em;"><?= $other_explain ?></label>
                         </div>
                     </div>
                 </div>
@@ -407,27 +408,41 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-6" style="text-align: right;">
+                <div class="form-group col-7" style="text-align: right;">
                     <label for="" class="indent">Student's Signature </label>
                 </div>
-                <div class="form-group col-6 style=" text-align: left;">
-                    <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-6">
-                </div>
-                <div class="form-group col-6" style="text-align: left; text-indent: 3px;">
-                    <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
+                <div class="form-group col-5">
+                    <center>
+                        <span style="padding:8px; width:70%">
+                            <label for="" class="dote"></label>
+                        </span>
+                    </center>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-8">
                 </div>
-                <div class="form-group col-4" style="text-align: left;">
-                    <center>
-                        <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
-                    </center>
+                <div class="form-group col-4">
+                    <p>
+                        <label for="" style="margin-top: -10px; text-indent: 2px">( </label>
+                        <label style="width: 70%;" for="" class="dote"></label>
+                        <label for="" style="margin-top: -10px;">)</label>
+                    </p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-8">
+                </div>
+                <div class="form-group col-4">
+                    <p>
+                        <label for="" style=" margin-top: -11px; text-indent: 3rem;  color: transparent;">.</label>
+                        <label style="width: 15%; " for="" class="dote"></label>
+                        <label for="" style="margin-top: -11px;">/</label>
+                        <label style="width: 15%;" for="" class="dote""></label>
+                        <label for="" style=" margin-top: -11px;">/</label>
+                        <label style="width: 15%;" for="" class="dote"></label>
+                        <label for=""></label>
+                    </p>
                 </div>
             </div>
             <!-- END PART 1 -->
@@ -444,12 +459,26 @@
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
-                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
-                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
-
-                    </div>
-                    <div class="column2">
-                        <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                        <center>
+                            <span style="padding:8px; width:80%">
+                                <label for="" class="dote"></label>
+                            </span>
+                        </center>
+                        <p>
+                            <label for="" style="margin-top: -10px; text-indent: 5rem;">( </label>
+                            <label style="width: 45%;" for="" class="dote">
+                            </label><label for="" style="margin-top: -10px;">)</label>
+                        </p>
+                        <br>
+                        <p>
+                            <label for="" style=" margin-top: -11px; text-indent: 6rem;  color: transparent;">.</label>
+                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style="margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label for="" style=" margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label for=""></label>
+                        </p>
                     </div>
                 </div>
                 <div class="part3 col-6">
@@ -462,11 +491,26 @@
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
-                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
-                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
                         <center>
-                            <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                            <span style="padding:8px; width:80%">
+                                <label for="" class="dote"></label>
+                            </span>
                         </center>
+                        <p>
+                            <label for="" style="margin-top: -10px; text-indent: 5rem;">( </label>
+                            <label style="width: 45%;" for="" class="dote">
+                            </label><label for="" style="margin-top: -10px;">)</label>
+                        </p>
+                        <br>
+                        <p>
+                            <label for="" style=" margin-top: -11px; text-indent: 6rem;  color: transparent;">.</label>
+                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style="margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label for="" style=" margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label for=""></label>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -496,11 +540,26 @@
                         <label for="" class="indent">Signature</label>
                     </div>
                     <div class="column2">
-                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
-                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
                         <center>
-                            <p><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                            <span style="padding:8px; width:80%">
+                                <label for="" class="dote"></label>
+                            </span>
                         </center>
+                        <p>
+                            <label for="" style="margin-top: -10px; text-indent: 5rem;">( </label>
+                            <label style="width: 45%;" for="" class="dote">
+                            </label><label for="" style="margin-top: -10px;">)</label>
+                        </p>
+                        <br>
+                        <p>
+                            <label for="" style=" margin-top: -11px; text-indent: 6rem;  color: transparent;">.</label>
+                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style="margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label for="" style=" margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label for=""></label>
+                        </p>
                     </div>
                 </div>
                 <div class="part5 col-6">
@@ -513,9 +572,24 @@
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
                         <span style="padding:8px;"><label for="" class="dote"></label></span>
-                        <center><span style="padding:8px; width:55%"><label for="" class="dote"></label></span></center>
-                        <center><span style="padding:8px; width:50%"><label for="" class="dote"></label></span></center>
-                        <p style="text-align: center;"><label style="width: 10%;" for="" class="dote"></label><label for="" style="margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote""></label><label for="" style=" margin-top: -11px;">/</label><label style="width: 10%;" for="" class="dote"></label><label for=""></label></p>
+                        <center>
+                            <span style="padding:8px; width:80%">
+                                <label for="" class="dote"></label>
+                            </span>
+                        </center>
+                        <p>
+                            <label for="" style="margin-top: -10px; text-indent: 4rem;">(  Mr.Ruangsak Kiengkamon  )</label>
+                        </p>
+                        <br>
+                        <p>
+                            <label for="" style=" margin-top: -11px; text-indent: 6rem; color: transparent; ">.</label>
+                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style="margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label for="" style=" margin-top: -11px;">/</label>
+                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label for=""></label>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -530,7 +604,8 @@
     <!-- Function checked box-->
     <script>
         /*  Checked box semester */
-        let semester = "<?php print $semester ?>";
+        var semester = "<?php print $semester ?>";
+
         if (semester == "First") {
             document.getElementById("firstsemester").checked = true;
         } else if (semester == "Second") {
@@ -542,27 +617,18 @@
         }
 
         /*  Checked box Student level*/
-        let std_level = "<?php print $std_level ?>";
-        if (std_level == "Undergraduate Student") {
+        var std_level = "<?php print $std_level ?>";
+        if (std_level == "Undergraduate") {
             document.getElementById("std_level_undergrad").checked = true;
-        } else if (std_level == "Graduate Student") {
+        } else if (std_level == "Graduate") {
             document.getElementById("std_level_grad").checked = true;
         }
-
-        /*  Checked box Student In process */
-        let prcess = "<?php print $std_inprocess ?>";
-        if (prcess == "In progess") {
-            document.getElementById("std_reason_inprogess").checked = true;
-        } else {
-            document.getElementById("std_reason_inprogess").checked = false;
-        }
-
-        /*  Checked box Student other reason */
-        let reason = "<?php print $std_otherreason ?>";
+        /* Checked box Student reason */
+        var reason = "<?php print $std_reason ?>";
         if (reason == "Other Reason") {
             document.getElementById("std_reason_other").checked = true;
-        } else {
-            document.getElementById("std_reason_other").checked = false;
+        } else if (reason == "In progess") {
+            document.getElementById("std_reason_inprogess").checked = true;
         }
     </script>
     <script src="js/jquery.slim.min.js"></script>
