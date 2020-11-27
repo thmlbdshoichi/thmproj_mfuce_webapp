@@ -19,8 +19,8 @@
     <?php
     // Include database connection file
     require_once "connectdb.php";
-    /*$form_id = $_GET['form_id'];*/
-    $sql = " SELECT * FROM input_form WHERE FORM_NO = '26' ";
+    $FORM_NO = $_GET['did'];
+    $sql = " SELECT * FROM input_form WHERE FORM_NO = $FORM_NO ";
     $result = mysqli_query($conn, $sql);
     ?>
     <?php
@@ -36,11 +36,6 @@
         $std_lastname =  $row["LAST_NAME"];
         $std_school = $row["SCHOOL"];
         $std_program = $row["PROGRAM"];
-        $std_address = $row['CURRENT_ADD'];
-        $std_subdistrict = $row['SUBDISTRICT'];
-        $std_district = $row['DISTRICT'];
-        $std_province = $row['PROVINCE'];
-        $std_postcode = $row['POST_NO'];
         $std_phone = $row['PHONE_NUMBER'];
         $course_code = $row['COURSE_CODE'];
         $course_title = $row['COURSE_TITLE'];

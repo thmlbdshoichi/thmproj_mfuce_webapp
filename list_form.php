@@ -23,14 +23,13 @@
         <div class="row mt-3">
                 <div class="col text-center"><h2 style="font-family: ConcertOne;">LIST OF ALL SUBMIT REG-211</h2></div>
         </div>
-        <div class="row mt-2">
+        <div class="row mt-2 mb-2">
                 <div class="col-4">
-                <form method="POST" action="input_insert_emp.php" style="font-family: ConcertOne;">
+                <form method="POST" action="reg211.php" style="font-family: ConcertOne;">
                         <button class="btn btn-primary" type="Submit">ADD NEW FORM</button>
                 </form>
                 </div>
         </div>
-        <br>
 
         <table class="table table-bordered table-striped" style="font-family: ConcertOne;">
                 <thead class="table-warning">
@@ -66,6 +65,7 @@
                         <td><?= $REASONS ?></td>
                         <td><?= $DATE ?></td>
                         <td class="text-center">
+                                <a href="form_print.php?did=<?= $FORM_NO ?>"><i class="fa fa-print" style="font-size:1.5rem"></i></a>
                                 <a href="view_form.php?did=<?= $FORM_NO ?>"><i class="fa fa-eye" style="font-size:1.5rem"></i></a>
                                 <a href="update_form.php?did=<?= $FORM_NO ?>"><i class="fa fa-pencil-square" style="font-size:1.5rem"></i></a>
                                 <a href="delete_form_sql.php?did=<?= $FORM_NO ?>" onClick="return confirm('Warning: Are you sure deleting this form?');"><i class="fa fa-trash" style="font-size:1.5rem"></i></a>
@@ -75,7 +75,9 @@
                 <?php
                         }
                 } else {
-                        echo "0 results";
+                ?>
+                        <td colspan="8" class="text-center">There is no form submitted</td>
+                <?php
                 }
                 ?>
         </table>

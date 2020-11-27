@@ -31,11 +31,6 @@
                 $DEAN = $row["DEAN"];
                 $SCHOOL = $row["SCHOOL"];
                 $PROGRAM = $row["PROGRAM"];
-                $CURRENT_ADD = $row["CURRENT_ADD"];
-                $SUBDISTRICT = $row["SUBDISTRICT"];
-                $DISTRICT = $row["DISTRICT"];
-                $PROVINCE = $row["PROVINCE"];
-                $POST_NO = $row["POST_NO"];
                 $PHONE_NUMBER = $row["PHONE_NUMBER"];
                 $REASONS = $row["REASONS"];
                 $COURSE_CODE = $row["COURSE_CODE"];
@@ -148,30 +143,7 @@
                     </select>
                 </div>
             </div>
-
             <div class="form-row">
-                <div class="form-group col-12 col-sm-4">
-                    <label for="std_lastname">Current Address</label>
-                    <input type="text" class="form-control" name="std_address" id="std_address" value="<?= $CURRENT_ADD ?>" readonly>
-                </div>
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">Subdistrict</label>
-                    <input type="text" class="form-control" name="std_subdistrict" id="std_subdistrict" value="<?= $SUBDISTRICT ?>" readonly>
-                </div>
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">District</label>
-                    <input type="text" class="form-control" name="std_district" id="std_district" value="<?= $DISTRICT ?>" readonly>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">Province</label>
-                    <input type="text" class="form-control" name="std_province" id="std_province" value="<?= $PROVINCE ?>" readonly>
-                </div>
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">Postal Code</label>
-                    <input type="text" class="form-control" name="std_postcode" id="std_postcode" value="<?= $POST_NO ?>" readonly>
-                </div>
                 <div class="form-group col-12  col-sm-4">
                     <label for="std_phone">Phone Number</label>
                     <input type="tel" class="form-control" name="std_phone" id="std_phone" value="<?= $PHONE_NUMBER ?>" readonly>

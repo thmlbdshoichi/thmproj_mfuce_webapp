@@ -102,9 +102,9 @@
                 <div class="form-group col-sm-2">
                     <label for="std_prefix">Prefix</label>
                     <select name="std_prefix" id="std_prefix" class="form-control">
-                        <option value="Mr.">Mr</option>
+                        <option value="Mr.">Mr.</option>
                         <option value="Miss">Miss</option>
-                        <option value="Mrs.">Mrs</option>
+                        <option value="Mrs.">Mrs.</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-5">
@@ -151,28 +151,6 @@
             </div>
 
             <div class="form-row">
-                <div class="form-group col-12 col-sm-4">
-                    <label for="std_lastname">Current Address</label>
-                    <input type="text" class="form-control" name="std_address" id="std_address" placeholder="221 Baker Street, Soi 5">
-                </div>
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">Subdistrict</label>
-                    <input type="text" class="form-control" name="std_subdistrict" id="std_subdistrict" placeholder="Mae Rai">
-                </div>
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">District</label>
-                    <input type="text" class="form-control" name="std_district" id="std_district" placeholder="Mae Chan">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">Province</label>
-                    <input type="text" class="form-control" name="std_province" id="std_province" placeholder="Chiang Rai">
-                </div>
-                <div class="form-group col-6  col-sm-4">
-                    <label for="std_lastname">Postal Code</label>
-                    <input type="text" class="form-control" name="std_postcode" id="std_postcode" placeholder="57100">
-                </div>
                 <div class="form-group col-12  col-sm-4">
                     <label for="std_phone">Phone Number</label>
                     <input type="tel" class="form-control" name="std_phone" id="std_phone" placeholder="08xxxxxxxx">
@@ -185,7 +163,7 @@
 
             <div class="form-row">
                 <div class="form-check form-check-inline mr-1">
-                    <input class="form-check-input" type="radio" name="std_process" id="std_reason_inprogess" value="In progess">
+                    <input class="form-check-input" type="radio" name="std_reason" id="std_reason_inprogess" value="In progess">
                     <label class="form-check-label" for="std_reason_inprogess">Receiving a P grade (In Progress)</label>
                 </div>
             </div>
