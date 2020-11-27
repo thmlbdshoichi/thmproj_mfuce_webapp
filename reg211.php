@@ -28,7 +28,7 @@
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">Request Form for Maintaining Student Status</p>
 
         <!-- START FORM -->
-        <form action="insert_form.php" method="POST" style="font-family:ConcertOne;" onSubmit="JavaScript:return fncSubmit();">
+        <form action="insert_form.php" method="POST" style="font-family:ConcertOne;" onSubmit="JavaScript : return fncSubmit();">
             <!-- TOP PART -->
             <div class="form-row mt-5">
                 <div class="form-group col-12">
@@ -174,7 +174,7 @@
                 </div>
                 <div class="form-group col-6  col-sm-6">
                     <label for="std_phone">Course Title</label>
-                    <input type="tel" class="form-control" name="course_title" id="std_phone" placeholder="Web Application Development">
+                    <input type="text" class="form-control" name="course_title" id="std_phone" placeholder="Web Application Development">
                 </div>
             </div>
             <div class="form-row">
@@ -186,16 +186,18 @@
             <div class="form-row mt-2">
                 <div class="form-group col-12">
                     <label for="std_reason">Reason</label>
-                    <input type="tel" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" placeholder="Specify your reason here">
+                    <input type="text" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" placeholder="Specify your reason here">
                 </div>
             </div>
             <div class="form-row mt-2">
                 <button type="submit" name="btn_insert" class="btn btn-success">Save</button>
                 <button type="Reset" class="btn btn-danger ml-3">Reset Data</button>
+                <a href="index.html"><button type="button" class="btn btn-danger ml-3">Back</button></a>
             </div>
-            <br>
-            <br>
         </form>
+        <br>
+        <br>
+
     </div>
     <script src="js/check_value.js"></script>
     <script src="js/jquery.slim.min.js"></script>

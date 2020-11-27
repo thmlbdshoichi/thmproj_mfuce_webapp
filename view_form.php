@@ -167,7 +167,7 @@
                 </div>
                 <div class="form-group col-6  col-sm-6">
                     <label for="std_phone">Course Title</label>
-                    <input type="tel" class="form-control" name="course_title" id="std_phone" value="<?= $COURSE_TITLE ?>" readonly>
+                    <input type="text" class="form-control" name="course_title" id="std_phone" value="<?= $COURSE_TITLE ?>" readonly>
                 </div>
             </div>
             <div class="form-row">
@@ -179,12 +179,12 @@
             <div class="form-row mt-2">
                 <div class="form-group col-12">
                     <label for="std_reason">Reason</label>
-                    <input type="tel" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" value="<?= $OTHER_EXPLAIN ?>" readonly>
+                    <input type="text" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" value="<?= $OTHER_EXPLAIN ?>" readonly>
                 </div>
             </div>
         </form>
         <div class="form-row mt-2">
-                <a href="read_form.php"><button name="btn_back" class="btn btn-success">Back</button></a>
+                <a href="list_form.php"><button type="button" name="btn_back" class="btn btn-success">Back</button></a>
         </div>
         <br>
         <br>

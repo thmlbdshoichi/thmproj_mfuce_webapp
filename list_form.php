@@ -21,16 +21,18 @@
 
         <div class="container main-container">
         <div class="row mt-3">
-                <div class="col text-center"><h2 style="font-family: ConcertOne;">LIST OF ALL SUBMIT REG-211</h2></div>
+                <div class="col-2"></div>
+                <div class="col-8 text-center">
+                        <p style="font-family: ConcertOne; font-size:calc(0.5rem + 1vw);">LIST OF ALL SUBMIT REG-211</p>
+                </div>
+                <div class="col-2"></div>
         </div>
         <div class="row mt-2 mb-2">
-                <div class="col-4">
-                <form method="POST" action="reg211.php" style="font-family: ConcertOne;">
-                        <button class="btn btn-primary" type="Submit">ADD NEW FORM</button>
-                </form>
+                <div class="col" style="font-family:ConcertOne;">
+                        <a href="reg211.php"><button class="btn btn-primary" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
                 </div>
         </div>
-
+        <div class="table-responsive-sm">
         <table class="table table-bordered table-striped" style="font-family: ConcertOne;">
                 <thead class="table-warning">
                 <tr>
@@ -81,6 +83,7 @@
                 }
                 ?>
         </table>
+        </div>
         </div>
 
         <?php mysqli_close($conn); ?>
