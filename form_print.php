@@ -53,7 +53,7 @@
         <div class="row mt-3"></div>
         <div class="container-inner">
 
-            <div style="height: 50px; ">
+            <div style="height: 70px; ">
                 <h6 style="font-weight: bold; text-align: right;">REG-211</h6>
             </div>
             <!-- Top -->
@@ -92,13 +92,13 @@
                         <div class="mat1" style="text-align: right;">
                             <div class="form-check form-check-inline mr-4">
                                 <label class="indent mr-3" id="semester">Semester </label>
-                                <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="firstsemester" value="First">
+                                <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="firstsemester" value="First" <?php if($semester=='First'){ echo "checked=checked";} ?>>
                                 <label class="form-check-label" for="firstsemester" id="firstsemester">First</label></div>
                             <div class="form-check form-check-inline mr-4">
-                                <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="secondsemester" value="Second">
+                                <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="secondsemester" value="Second" <?php if($semester=='Second'){ echo "checked=checked";} ?>>
                                 <label class="form-check-label" for="secondsemester" id="secondsemester">Second</label></div>
                             <div class="form-check form-check-inline mr-4">
-                                <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="summersemester" value="Summer">
+                                <input class="form-check-input mr-3 mb-1" type="checkbox" name="semesteroption" id="summersemester" value="Summer" <?php if($semester=='Summer'){ echo "checked=checked";} ?>>
                                 <label class="form-check-label" for="summersemester" id="summersemester">Summer</label></div>
                             <label class=" indent mb-2" for="Academicyear" id="Academicyear">Academic year </label>
                         </div>
@@ -235,7 +235,7 @@
                 </div>
             </div>
             <div class="row mt-4"></div>
-            <div class="form-row">
+            <!--<div class="form-row">
                 <div class="form-group col-2">
                     <div class="box">
                         <div class="mat1">
@@ -323,6 +323,22 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <div class="form-row mt-2">
+            <div class="form-group col-2">
+                    <div class="box">
+                        <div class="mat1">
+                            <label for="">Mobile phone</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-4">
+                    <div class="box-dote">
+                        <div class="mat">
+                            <label for="" style="text-indent: 1em; font-family: sans-serif;"><?= $std_phone ?></label>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row mt-3"></div>
             <div class="form-row">
@@ -399,7 +415,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form-row">
+            <div class="form-row mt-3">
                 <div class="form-group col-1">
                     <!-- blank -->
                 </div>
@@ -435,7 +451,7 @@
                 </div>
                 <div class="form-group col-4">
                     <p>
-                        <label for="" style=" margin-top: -11px; text-indent: 3rem;  color: transparent;">.</label>
+                        <label for="" style=" margin-top: -11px; text-indent: 2rem;  color: transparent;">.</label>
                         <label style="width: 15%; " for="" class="dote"></label>
                         <label for="" style="margin-top: -11px;">/</label>
                         <label style="width: 15%;" for="" class="dote""></label>
@@ -465,18 +481,18 @@
                             </span>
                         </center>
                         <p>
-                            <label for="" style="margin-top: -10px; text-indent: 5rem;">( </label>
-                            <label style="width: 45%;" for="" class="dote">
+                            <label for="" style="margin-top: -10px; text-indent: 3rem;">( </label>
+                            <label style="width: 65%;" for="" class="dote">
                             </label><label for="" style="margin-top: -10px;">)</label>
                         </p>
                         <br>
                         <p>
-                            <label for="" style=" margin-top: -11px; text-indent: 6rem;  color: transparent;">.</label>
-                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style=" margin-top: -11px; text-indent: 5rem;  color: transparent;">.</label>
+                            <label style="width: 15%; " for="" class="dote"></label>
                             <label for="" style="margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label style="width: 15%;" for="" class="dote""></label>
                             <label for="" style=" margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label style="width: 15%;" for="" class="dote"></label>
                             <label for=""></label>
                         </p>
                     </div>
@@ -497,18 +513,18 @@
                             </span>
                         </center>
                         <p>
-                            <label for="" style="margin-top: -10px; text-indent: 5rem;">( </label>
-                            <label style="width: 45%;" for="" class="dote">
+                            <label for="" style="margin-top: -10px; text-indent: 3rem;">( </label>
+                            <label style="width: 65%;" for="" class="dote">
                             </label><label for="" style="margin-top: -10px;">)</label>
                         </p>
                         <br>
                         <p>
-                            <label for="" style=" margin-top: -11px; text-indent: 6rem;  color: transparent;">.</label>
-                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style=" margin-top: -11px; text-indent: 5rem;  color: transparent;">.</label>
+                            <label style="width: 15%; " for="" class="dote"></label>
                             <label for="" style="margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label style="width: 15%;" for="" class="dote""></label>
                             <label for="" style=" margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label style="width: 15%;" for="" class="dote"></label>
                             <label for=""></label>
                         </p>
                     </div>
@@ -546,18 +562,18 @@
                             </span>
                         </center>
                         <p>
-                            <label for="" style="margin-top: -10px; text-indent: 5rem;">( </label>
-                            <label style="width: 45%;" for="" class="dote">
+                            <label for="" style="margin-top: -10px; text-indent: 3rem;">( </label>
+                            <label style="width: 65%;" for="" class="dote">
                             </label><label for="" style="margin-top: -10px;">)</label>
                         </p>
                         <br>
                         <p>
-                            <label for="" style=" margin-top: -11px; text-indent: 6rem;  color: transparent;">.</label>
-                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style=" margin-top: -11px; text-indent: 5rem;  color: transparent;">.</label>
+                            <label style="width: 15%; " for="" class="dote"></label>
                             <label for="" style="margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label style="width: 15%;" for="" class="dote""></label>
                             <label for="" style=" margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label style="width: 15%;" for="" class="dote"></label>
                             <label for=""></label>
                         </p>
                     </div>
@@ -582,12 +598,12 @@
                         </p>
                         <br>
                         <p>
-                            <label for="" style=" margin-top: -11px; text-indent: 6rem; color: transparent; ">.</label>
-                            <label style="width: 10%; " for="" class="dote"></label>
+                            <label for="" style=" margin-top: -11px; text-indent: 5rem;  color: transparent;">.</label>
+                            <label style="width: 15%; " for="" class="dote"></label>
                             <label for="" style="margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote""></label>
+                            <label style="width: 15%;" for="" class="dote""></label>
                             <label for="" style=" margin-top: -11px;">/</label>
-                            <label style="width: 10%;" for="" class="dote"></label>
+                            <label style="width: 15%;" for="" class="dote"></label>
                             <label for=""></label>
                         </p>
                     </div>
@@ -601,21 +617,8 @@
             </div>
         </div>
     </class>
-    <!-- Function checked box-->
+    <!-- checked box-->
     <script>
-        /*  Checked box semester */
-        var semester = "<?php print $semester ?>";
-
-        if (semester == "First") {
-            document.getElementById("firstsemester").checked = true;
-        } else if (semester == "Second") {
-            document.getElementById("secondsemester").checked = true;
-        } else if (semester == "Summer") {
-            document.getElementById("summersemester").checked = true;
-        } else {
-            document.getElementById("summersemester").checked = true;
-        }
-
         /*  Checked box Student level*/
         var std_level = "<?php print $std_level ?>";
         if (std_level == "Undergraduate") {
