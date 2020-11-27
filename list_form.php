@@ -29,7 +29,7 @@
         </div>
         <div class="row mt-2 mb-2">
                 <div class="col" style="font-family:ConcertOne;">
-                        <a href="reg211.php"><button class="btn btn-primary" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
+                        <a href="reg211.php"><button class="btn btn-primary btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
                 </div>
         </div>
         <div class="table-responsive-sm">
@@ -83,6 +83,11 @@
                 }
                 ?>
         </table>
+        </div>
+        <div class="row mt-2 mb-2">
+                <div class="col" style="font-family:ConcertOne;">
+                        <a href="index.html"><button class="btn btn-dark btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">BACK</button></a>
+                </div>
         </div>
         </div>
 

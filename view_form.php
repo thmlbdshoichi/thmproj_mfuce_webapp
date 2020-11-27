@@ -182,10 +182,10 @@
                     <input type="text" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" value="<?= $OTHER_EXPLAIN ?>" readonly>
                 </div>
             </div>
+            <div class="form-row mt-2">
+                <a href="list_form.php"><button type="button" name="btn_back" class="btn btn-dark">Back</button></a>
+            </div>
         </form>
-        <div class="form-row mt-2">
-                <a href="list_form.php"><button type="button" name="btn_back" class="btn btn-success">Back</button></a>
-        </div>
         <br>
         <br>
     </div>
