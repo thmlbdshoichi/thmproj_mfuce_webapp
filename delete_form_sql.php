@@ -1,8 +1,8 @@
 <?php
 
-if(empty(trim($_GET["did"]))){
+if(empty(trim($_GET["formid"]))){
     // URL doesn't contain id parameter. Redirect to error page
-    header("location: read_form.php");
+    header("location: list_form.php");
 exit();
 }
 else{
@@ -10,7 +10,7 @@ else{
     // Include database connection file
     require_once "connectdb.php";
 
-    $FORM_NO = $_GET["did"];
+    $FORM_NO = $_GET["formid"];
 
     $sql_delete = "DELETE FROM input_form WHERE FORM_NO = $FORM_NO";
 
@@ -20,7 +20,7 @@ else{
         die('Error: ' . mysqli_error($conn));
     }
     else {
-        header("location: read_form.php");
+        header("location: list_form.php");
     }
 
     mysqli_close($conn);

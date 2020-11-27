@@ -65,10 +65,10 @@
                         <td><?= $REASONS ?></td>
                         <td><?= $DATE ?></td>
                         <td class="text-center">
-                                <a href="form_print.php?did=<?= $FORM_NO ?>"><i class="fa fa-print" style="font-size:1.5rem"></i></a>
-                                <a href="view_form.php?did=<?= $FORM_NO ?>"><i class="fa fa-eye" style="font-size:1.5rem"></i></a>
-                                <a href="update_form.php?did=<?= $FORM_NO ?>"><i class="fa fa-pencil-square" style="font-size:1.5rem"></i></a>
-                                <a href="delete_form_sql.php?did=<?= $FORM_NO ?>" onClick="return confirm('Warning: Are you sure deleting this form?');"><i class="fa fa-trash" style="font-size:1.5rem"></i></a>
+                                <a href="form_print.php?formid=<?= $FORM_NO ?>"><i class="fa fa-print" style="font-size:1.5rem"></i></a>
+                                <a href="view_form.php?formid=<?= $FORM_NO ?>"><i class="fa fa-eye" style="font-size:1.5rem"></i></a>
+                                <a href="update_form.php?formid=<?= $FORM_NO ?>"><i class="fa fa-pencil-square" style="font-size:1.5rem"></i></a>
+                                <a href="delete_form_sql.php?formid=<?= $FORM_NO ?>" onClick="return confirm('Warning: Are you sure deleting this form?');"><i class="fa fa-trash" style="font-size:1.5rem"></i></a>
                         </td>
                 </tr>
 

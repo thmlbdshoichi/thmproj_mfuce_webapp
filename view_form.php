@@ -12,7 +12,7 @@
 <body>
     <?php 
         require_once "connectdb.php";
-        $FORM_NO = $_GET['did'];
+        $FORM_NO = $_GET['formid'];
 
         $sql_selectall = "SELECT * FROM input_form WHERE FORM_NO = $FORM_NO";
     
