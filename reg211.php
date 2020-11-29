@@ -12,8 +12,8 @@
 <body>
     <?php 
         require_once "connectdb.php";
-        $sql_SCHOOL = "SELECT SCHOOL_NAME, SCHOOL_ID FROM school;";
-        $sql_PROGRAM = "SELECT PRO_NAME, SCHOOL_ID FROM program;";
+        $sql_SCHOOL = "SELECT SCHOOL_NAME, SCHOOL_ID FROM school ORDER BY `SCHOOL_ID` ASC;";
+        $sql_PROGRAM = "SELECT PRO_NAME, SCHOOL_ID FROM program ORDER BY `SCHOOL_ID` ASC;";
         /*$sql_C_CODE = "SELECT COURSE_CODE FROM courses;";
         $sql_C_TITLE = "SELECT COURSE_TITLE FROM courses;";*/
 
@@ -199,6 +199,14 @@
         <br>
 
     </div>
+    <script>
+        Date.prototype.toDateInputValue = (function() {
+        var local = new Date(this);
+        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        return local.toJSON().slice(0,10);
+        });
+        document.getElementById('date').value = new Date().toDateInputValue();
+    </script>
     <script src="js/check_value.js"></script>
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

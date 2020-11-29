@@ -45,7 +45,7 @@ $course_title_2 = mysqli_real_escape_string($conn, $course_title);
 $std_reason = $_POST['std_reason'];
 $std_explain = $_POST['std_reason_other_explain'];
 $std_explain_2 = mysqli_real_escape_string($conn, $std_explain);
-
+$check = $_POST['check'];
 $sql = "UPDATE input_form SET SEMESTER = '$semester', DATE = '$date', ACADEMIC_YEAR = '$academicyear', DEAN = '$dean_of', PREFIX = '$std_prefix', 
 FIRST_NAME = '$std_firstname_2', LAST_NAME = '$std_lastname_2', ST_ID = '$std_id_2', ST_LEVEL = '$std_level', SCHOOL = '$std_school', PROGRAM = '$std_program', 
 PHONE_NUMBER = '$std_phone_2', COURSE_CODE = '$course_code_2', COURSE_TITLE = '$course_title_2', REASONS = '$std_reason', OTHER_EXPLAIN = '$std_explain_2' 
@@ -57,20 +57,13 @@ if (!$result){
     die('Error: ' . mysql_error($conn));
 }
 else {
-    /*echo "Successfully Updated! <br><br>";
-    echo "EMPLOYEE ID = $emp_id <br>";
-    echo "FIRSTNAME = $f_name <br>";
-    echo "LASTNAME = $s_name <br>";
-    echo "EMAIL = $email <br>";
-    echo "PHONE NUMBER = $tel <br>";
-    echo "Hire Date = $hiredate <br>";
-    echo "JOB_ID = $job_id <br>";
-    echo "SALARY = $salary <br>";
-    echo "COMMISSION = $com_pct <br>";
-    echo "MANAGER_ID = $man_id <br>";
-    echo "DEPARTMENT_ID = $dept_id <br><br>";
-    echo '<a href="read_table.php">BACK TO READ TABLE</a>';*/
-    header("location: list_form.php");
+    if($check == "21232f297a57a5a743894a0e4a801fc3")
+    {
+        header("location: list_form.php?stid=admin");
+    }
+    else{
+        header("location: list_form.php?stid=$std_id_2");
+    }
 }
 
 mysqli_close($conn);

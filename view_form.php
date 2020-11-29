@@ -51,7 +51,7 @@
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">Request Form for Maintaining Student Status</p>
 
         <!-- START FORM -->
-        <form action="insert_form.php" method="POST" style="font-family:ConcertOne;">
+        <form action="list_form.php" method="POST" style="font-family:ConcertOne;">
             <!-- TOP PART -->
             <div class="form-row mt-5">
                 <div class="form-group col-12">
@@ -183,7 +183,8 @@
                 </div>
             </div>
             <div class="form-row mt-2">
-                <a href="list_form.php"><button type="button" name="btn_back" class="btn btn-dark">Back</button></a>
+                <input type="hidden" name="STUDENT_ID" value="<?= $ST_ID ?>" readonly>
+                <button type="submit" name="btn_back" class="btn btn-dark">Back</button>
             </div>
         </form>
         <br>

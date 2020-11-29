@@ -32,7 +32,8 @@ $result = mysqli_query($conn, $sql);
 if (!$result) {
     die('Error: ' . mysqli_error($conn));
 } else {
-    header("location: list_form.php");
+
+    header("location: list_form.php?stid=$std_id_2");
 }
 
 mysqli_close($conn);
