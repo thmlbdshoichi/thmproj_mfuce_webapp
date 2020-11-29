@@ -626,7 +626,6 @@
                 <div class="form-group">
                     <div class="center">
                         <button class="btn btn-success print  mr-2" onclick="window.print()">Print</button>
-                        <a href="list_form.php"><button type="button" name="btn_back" class="btn btn-dark">Back</button></a>
                     </div>
                 </div>
             </div>

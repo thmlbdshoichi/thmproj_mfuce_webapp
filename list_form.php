@@ -15,7 +15,26 @@
 <body>
         
         <?php
-                $sql = "SELECT FORM_NO, ST_ID, DATE, FIRST_NAME, LAST_NAME, ST_LEVEL, SCHOOL, REASONS FROM input_form";
+                if (!empty($_POST['STUDENT_ID'])) {
+                        $STUDENT_ID = $_POST['STUDENT_ID'];
+                }
+                elseif (!empty($_GET['stid'])){
+                        $STUDENT_ID = $_GET['stid'];
+                }
+                else{
+                        $STUDENT_ID = NULL;
+                }
+
+                if ($STUDENT_ID == 'ADMIN' or $STUDENT_ID == '221' or $STUDENT_ID == 'admin'){
+                        $sql = "SELECT FORM_NO, ST_ID, DATE, FIRST_NAME, LAST_NAME, ST_LEVEL, SCHOOL, REASONS FROM input_form";
+                        $HEADER = "LIST ALL REG-211 (ADMIN PANEL)";
+                        $check = "21232f297a57a5a743894a0e4a801fc3";
+                }
+                else{
+                        $sql = "SELECT FORM_NO, ST_ID, DATE, FIRST_NAME, LAST_NAME, ST_LEVEL, SCHOOL, REASONS FROM input_form WHERE ST_ID = '$STUDENT_ID'";
+                        $HEADER = "REG-211 SUMMITED ($STUDENT_ID)";
+                        $check = "ee11cbb19052e40b07aac0ca060c23ee";
+                }
                 $result = mysqli_query($conn,$sql);
         ?>
 
@@ -23,7 +42,7 @@
         <div class="row mt-3">
                 <div class="col-2"></div>
                 <div class="col-8 text-center">
-                        <p style="font-family: ConcertOne; font-size:calc(0.5rem + 1vw);">LIST OF ALL SUBMIT REG-211</p>
+                        <p style="font-family: ConcertOne; font-size:calc(0.5rem + 1vw);"><?= $HEADER ?></p>
                 </div>
                 <div class="col-2"></div>
         </div>
@@ -69,8 +88,8 @@
                         <td class="text-center">
                                 <a href="form_print.php?formid=<?= $FORM_NO ?>"><i class="fa fa-print" style="font-size:1.5rem"></i></a>
                                 <a href="view_form.php?formid=<?= $FORM_NO ?>"><i class="fa fa-eye" style="font-size:1.5rem"></i></a>
-                                <a href="update_form.php?formid=<?= $FORM_NO ?>"><i class="fa fa-pencil-square" style="font-size:1.5rem"></i></a>
-                                <a href="delete_form_sql.php?formid=<?= $FORM_NO ?>" onClick="return confirm('Warning: Are you sure deleting this form?');"><i class="fa fa-trash" style="font-size:1.5rem"></i></a>
+                                <a href="update_form.php?formid=<?= $FORM_NO ?>&check=<?= $check ?>"><i class="fa fa-pencil-square" style="font-size:1.5rem"></i></a>
+                                <a href="delete_form_sql.php?formid=<?= $FORM_NO ?>&stid=<?= $ST_ID ?>&check=<?= $check ?>" onClick="return confirm('Warning: Are you sure deleting this form?');"><i class="fa fa-trash" style="font-size:1.5rem"></i></a>
                         </td>
                 </tr>
 
