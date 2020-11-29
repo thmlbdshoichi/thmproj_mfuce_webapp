@@ -115,7 +115,7 @@
                         <div class="form-group col-3">
                             <div class="box">
                                 <div class="mat1">
-                                    <label for="" style="font-weight: bold; text-indent: 2em;"> (1) To the Dean of School</label>
+                                    <label for="" style="font-weight: bold;"> (1) To the Dean of School</label>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +216,7 @@
                         <div class="form-group col-2">
                             <div class="box">
                                 <div class="mat1">
-                                    <label for="">Program of</label>
+                                    <label for="" style="text-indent: 3em;">Program of</label>
                                 </div>
                             </div>
                         </div>
@@ -229,95 +229,6 @@
                         </div>
                     </div>
                     <div class="row mt-3"></div>
-                    <!--<div class="form-row">
-                <div class="form-group col-2">
-                    <div class="box">
-                        <div class="mat1">
-                            <label for="">Current address</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-5">
-                    <div class="box-dote">
-                        <div class="mat">
-                            <label for="" style="text-indent: 1em;"><?= $std_address ?></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-1">
-                    <div class="box">
-                        <div class="mat1">
-                            <label for="">Subdistrict</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-4">
-                    <div class="box-dote">
-                        <div class="mat">
-                            <label for="" style="text-indent: 1em;"><?= $std_subdistrict ?></label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4"></div>
-            <div class="form-row">
-                <div class="form-group col-1">
-                    <div class="box">
-                        <div class="mat1">
-                            <label for="">District</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-2">
-                    <div class="box-dote">
-                        <div class="mat">
-                            <label for="" style="text-indent: 1em;"><?= $std_district ?></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-1">
-                    <div class="box">
-                        <div class="mat1">
-                            <label for="" style="text-indent: 1em;">Province</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-2">
-                    <div class="box-dote">
-                        <div class="mat">
-                            <label for="" style="text-indent: 1em;"><?= $std_province  ?></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-1">
-                    <div class="box">
-                        <div class="mat1">
-                            <label for="" style="text-indent: 1em; ">Post code</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-1">
-                    <div class="box-dote">
-                        <div class="mat">
-                            <label for="" style="text-indent: 1em; font-family: sans-serif;"><?= $std_postcode  ?></label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-2">
-                    <div class="box">
-                        <div class="mat1">
-                            <label for="" style="text-indent: 3em;">Mobile phone</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-2">
-                    <div class="box-dote">
-                        <div class="mat">
-                            <label for="" style="text-indent: 1em; font-family: sans-serif;"><?= $std_phone ?></label>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
                     <div class="form-row mt-1">
                         <div class="form-group col-2">
                             <div class="box">
@@ -352,19 +263,36 @@
                         </div>
                         <div class="form-check form-check-inline mr-1 col-2">
                             <?php
-                            $cousre_id = " $course_code  ";
+                            $cousre_id = "$course_code";
                             ?>
-                            <table border="1">
-                                <tr>
-                                    <th><?= substr($cousre_id, 1, 1) ?></th>
-                                    <th><?= substr($cousre_id, 2, 1) ?></th>
-                                    <th><?= substr($cousre_id, 3, 1) ?></th>
-                                    <th><?= substr($cousre_id, 4, 1) ?></th>
-                                    <th><?= substr($cousre_id, 5, 1) ?></th>
-                                    <th><?= substr($cousre_id, 6, 1) ?></th>
-                                    <th><?= substr($cousre_id, 7, 1) ?></th>
-                                </tr>
-                            </table>
+                            <?php
+                            if ($cousre_id == "") {
+                            ?>
+                                <table border="1">
+                                    <tr>
+                                        <th style="color: transparent;">0</th>
+                                        <th style="color: transparent;">0</th>
+                                        <th style="color: transparent;">0</th>
+                                        <th style="color: transparent;">0</th>
+                                        <th style="color: transparent;">0</th>
+                                        <th style="color: transparent;">0</th>
+                                        <th style="color: transparent;">0</th>
+                                    </tr>
+                                </table>
+                            <?php } else {
+                            ?>
+                                <table border="1">
+                                    <tr>
+                                        <th><?= substr($cousre_id, 0, 1) ?></th>
+                                        <th><?= substr($cousre_id, 1, 1) ?></th>
+                                        <th><?= substr($cousre_id, 2, 1) ?></th>
+                                        <th><?= substr($cousre_id, 3, 1) ?></th>
+                                        <th><?= substr($cousre_id, 4, 1) ?></th>
+                                        <th><?= substr($cousre_id, 5, 1) ?></th>
+                                        <th><?= substr($cousre_id, 6, 1) ?></th>
+                                    </tr>
+                                </table>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="row mt-4"></div>

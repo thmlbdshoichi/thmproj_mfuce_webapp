@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background: #504c4c;
 }
 * {
   box-sizing: border-box;
@@ -20,8 +21,13 @@ body {
   margin: 0;
 }
 @media print {
+  body {
+    background: #ffffff;
+  }
   .page {
     margin: 0;
+    margin-right: 0.7cm;
+    margin-left: 0.7cm;
     border: initial;
     border-radius: initial;
     width: initial;
