@@ -53,11 +53,11 @@
                             <p><label for="">No</label><span><label for="" class="dote"></label></span></p>
                             <p><label for="">Date</label><span><label for="" class="dote"></label></span></p>
                             <div class="row mt-2"></div>
-                            <p><label for="" style="margin-top: -10px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
-                            <p><label for="" style="margin-top: -10px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
+                            <p><label for="" style="margin-top: -8px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
+                            <p><label for="" style="margin-top: -8px;">Recoded by</label><span><label for="" style="margin-top: -9px;" class="dote"></label></span></p>
                         </div>
                         <div class="col-4">
-                            <img src="img/mfulogo.png" style="width:auto; height:10rem;" class="mx-auto d-block mb-2 mt-5">
+                            <img src="img/logomfu_print.jpg" style="width:auto; height:10rem;" class="mx-auto d-block mb-2 mt-5">
                         </div>
                         <div class="headbox col-4">
                             <p><label for="" style="font-weight: bold; text-indent: 3em;">The Division of Registrar</label><br></p>
@@ -65,8 +65,8 @@
                             <p><label for="">No</label><span><label for="" class="dote"></label></span></p>
                             <p> <label for="">Date</label><span><label for="" class="dote"></label></span></p>
                             <div class="row mt-2"></div>
-                            <p><label for="" style="margin-top: -10px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
-                            <p><label for="" style="margin-top: -10px;">Recoded by</label><span><label for="" style="margin-top: -11px;" class="dote"></label></span></p>
+                            <p><label for="" style="margin-top: -8px;">Time</label><label style="width: 30%;" for="" class="dote"></label></p>
+                            <p><label for="" style="margin-top: -8px;">Recoded by</label><span><label for="" style="margin-top: -9px;" class="dote"></label></span></p>
                         </div>
                     </div>
                     <!-- Top -->

@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project : Web Application</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/thm.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <!-- FORM STUDENT AUTO ID-->
-        <form method="POST" style="font-family:ConcertOne;">
-            <div class="form-row mt-5">
-                <div class="col"></div>
-                <div class="form-group col">
-                    <label for="STUDENT_ID">Student ID</label>
-                    <input type="text" class="form-control" name="STUDENT_ID" id="STUDENT_ID" placeholder="6131501016">
-                </div>
-                <div class="col"></div>
-            </div>
-            <div class="form-row mt-2">
-                <div class="col"></div>
-                <div class="col">
-                    <button type="submit" name="btn_insert" class="btn btn-success" formaction="reg211_ID.php">NEW FORM</button>
-                    <button type="submit" class="btn btn-danger ml-3" formaction="list_form.php">VIEW FORM (221 = ALL)</button></a>
-                </div>
-                <div class="col"></div>
-            </div>
-        </form>
-    </div>
 
-<script src="js/jquery.slim.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+<body style="background-image: url('img/background_mfu.png');">
+
+    <div class="container">
+        <div class="row">
+            <div class="boxleft float col-12 col-sm-12 col-md-12 col-lg-6">
+                <!-- FORM STUDENT AUTO ID-->
+                <div class="content">
+                    <div class="col-12">
+                        <div id="myDIV">
+                            <img src="img/mfulogo.png" style="width:auto; height:10rem;"
+                                class="mx-auto d-block mb-2 mt-5">
+                            <label id="head" for="">Request Form for Maintaining Student Status</label>
+                        </div>
+                    </div>
+                    <form method="POST">
+                        <div class="form-row mt-3">
+                            <div class="form-group col">
+                                <label for="STUDENT_ID" style="float: left;">Student ID</label>
+                                <input type="text" class="form-control" name="STUDENT_ID" id="STUDENT_ID"
+                                    placeholder="6131501016">
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <div class class="col">
+                                <button type="submit" name="btn_insert" class="btn btn-success"
+                                    formaction="reg211_ID.php">NEW FORM</button>
+                                <button type="submit" class="btn btn-info submit" formaction="list_form.php">VIEW
+                                    FORM</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

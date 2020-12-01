@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+body {
+  margin-top: 2rem;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  background-position: center ;
+  opacity: 1;
+  font-family: "Rajdhani", sans-serif;
+  color: azure;
+}
+#myDIV {
+  animation: mymove 8s infinite;
+}
+@keyframes mymove {
+  80% {
+    text-shadow: 15px 12px 30px black;
+  }
+}
+.form-control {
+  font-family: "Rajdhani", "Kanit", sans-serif;
+  width: 100%;
+  height: auto;
+  padding: 7px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(78, 76, 76, 0.2),
+    0 6px 20px 0 rgba(61, 58, 58, 0.19);
+}
+
+.boxleft {
+  background-color: rgb(255, 255, 255);
+  height: 570px;
+  width: 50%;
+  padding: 0;
+  margin: auto;
+  border-radius: 12px;
+
+}
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.center{
+  text-align: center;
+}
+.content {
+  text-align: center;
+  margin: 5%;
+  padding: 5px;
+}
+#head {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+label{
+    color: black;
+}
+input:hover {
+  border-color: rgb(204, 8, 8);
+}
+.float {
+  float: left;
+}
+@media screen and (max-width: 800px) {
+  .boxright {
+    display: none;
+  }
+  .boxleft{
+    text-align: center;
+    justify-content: center;
+    height: 600px;
+  }
+}
+
+
