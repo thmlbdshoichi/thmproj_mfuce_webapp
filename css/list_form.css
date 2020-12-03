@@ -1,0 +1,86 @@
+    .head {
+        color: white;
+        text-shadow: yellowgreen;
+    }
+    
+    .fullscreen {
+        background-image: url('https://i.pinimg.com/originals/d7/f3/59/d7f3591a9c80d901dd13a23f79246459.jpg');
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 650px;
+        width: 100%;
+        background-position: center;
+    }
+    
+    .head {
+        animation: mymove 8s infinite;
+        color: crimson;
+    }
+    
+    @keyframes mymove {
+        100% {
+            text-shadow: 0 0 0.3em rgb(252, 98, 193), 0 0 0.3em rgb(240, 144, 227)
+        }
+        /*border-radius: 10px;
+    width: 50%;
+    background-color: rgb(251, 252, 185);
+    height: 50px;
+    border: 3px solid #f5f826;
+    color: teal;*/
+    }
+    
+    .btn {
+        width: 40%;
+    }
+    
+    .btnewform {
+        background-color: rgb(215, 250, 250);
+        color: rgb(15, 10, 10);
+        border: 3px solid #1848e6;
+        animation: mymove 8s infinite;
+        font-weight: bold;
+    }
+    
+    @keyframes mymove {
+        100% {
+            text-shadow: 0 0 0.3em rgb(90, 235, 235), 0 0 0.3em rgb(28, 228, 228)
+        }
+    }
+    
+    .btback {
+        background-color: rgb(216, 218, 218);
+        color: rgb(15, 10, 10);
+        border: 3px solid #212224;
+        animation: mymove 8s infinite;
+        font-weight: bold;
+    }
+    
+    @keyframes mymove {
+        100% {
+            text-shadow: 0 0 0.3em rgb(248, 93, 202), 0 0 0.3em rgb(248, 164, 223)
+        }
+    }
+    
+    .newform {
+        padding-left: 40%;
+    }
+    
+    .back {
+        padding-left: 40%;
+    }
+    
+    .bgtable {
+        background-color: rgb(248, 183, 245);
+    }
+    
+    .allform {
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        opacity: 0.8;
+        border: 3px solid #0b806c;
+    }

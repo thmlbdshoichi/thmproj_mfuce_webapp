@@ -10,10 +10,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/thm.css">
+        <link rel="stylesheet" href="css/list_form.css">
         <title>REG211 : LIST OF Form</title>
 </head>
 <body>
-        
+    
+        <div class="fullscreen">
         <?php
                 if (!empty($_POST['STUDENT_ID'])) {
                         $STUDENT_ID = $_POST['STUDENT_ID'];
@@ -38,19 +40,32 @@
                 $result = mysqli_query($conn,$sql);
         ?>
 
+        <div class="form_table">
+
         <div class="container main-container">
+               <br><br><br><br><br>
         <div class="row mt-3">
                 <div class="col-2"></div>
                 <div class="col-8 text-center">
-                        <p style="font-family: ConcertOne; font-size:calc(0.5rem + 1vw);"><?= $HEADER ?></p>
+                        <center>
+                        <div class="head">
+                        <u><p style="font-family: ConcertOne; font-size:calc(0.5rem + 1vw);"><?= $HEADER ?></p></u>
+                        </div>
+                        </center>
                 </div>
                 <div class="col-2"></div>
         </div>
+        <br><br>
+        <div class="allform">
         <div class="row mt-2 mb-2">
-                <div class="col" style="font-family:ConcertOne;">
-                        <a href="reg211.php"><button class="btn btn-primary btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
+                
+                <div class="newform col" style="font-family:ConcertOne;">
+                        <a href="reg211.php"><button class="btnewform btn btn-primary btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
                 </div>
+                
         </div>
+        <br>
+        <div class="bgtable">
         <div class="table-responsive-sm">
         <table class="table table-bordered table-striped" style="font-family: ConcertOne;">
                 <thead class="table-warning">
@@ -103,16 +118,23 @@
                 ?>
         </table>
         </div>
+        </div>
         <div class="row mt-2 mb-2">
-                <div class="col" style="font-family:ConcertOne;">
-                        <a href="index.html"><button class="btn btn-dark btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">BACK</button></a>
+                <div class="back col" style="font-family:ConcertOne;">
+                        <a href="index.html"><button class=" btback btn btn-dark btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">BACK</button></a>
                 </div>
         </div>
         </div>
 
         <?php mysqli_close($conn); ?>
-
+        
+        </div>
 <script src="js/jquery.slim.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
+
+        </div>        
+
+        </div>
+
 </body>
 </html>
