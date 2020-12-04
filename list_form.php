@@ -67,7 +67,7 @@ require_once "connectdb.php";
                                         </div>
                                         <br>
                                         <div class="bgtable">
-                                                <div class="table-responsive-sm">
+                                                <div class="table-responsive-lg">
                                                         <table class="table table-bordered table-striped" style="font-family: ConcertOne;">
                                                                 <thead class="table-warning">
                                                                         <tr>
