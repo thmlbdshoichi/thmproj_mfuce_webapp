@@ -106,7 +106,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td align="left" style="text-indent: 2em;">(1) To the Dean of School&nbsp;&nbsp;<input id="txt" type="text" name="a" value="<?= $dean_of ?>" style="width: 350px; text-align:center" readonly="">&nbsp;&nbsp;Student level
+                                <td align="left" style="text-indent: 2em;"><b>(1) To the Dean of School</b>&nbsp;&nbsp;<input id="txt" type="text" name="a" value="<?= $dean_of ?>" style="width: 350px; text-align:center" readonly="">&nbsp;&nbsp;Student level
                                 </td>
                             </tr>
                             <tr>
@@ -193,7 +193,7 @@
                         </div>
                         <div class="form-check form-check-inline mr-1">
                             <input class="form-check-input" type="checkbox" name="std_reason" id="std_reason_inprogess" value="In progess">
-                            <label class="form-check-label" for="std_reason_inprogess" style="text-indent: 1em;">Receiving a P grade (In Progress) in
+                            <label class="form-check-label" for="std_reason_inprogess" style="text-indent: 1em;">Receiving a <b>P</b> grade (In Progress) in
                                 Course Code </label>
                         </div>
                         <div class="form-check form-check-inline mr-1 col-2">

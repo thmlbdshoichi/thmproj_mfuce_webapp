@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/thm.css">
-    <title>Form - REG211 UPDATE</title>
+    <link rel="stylesheet" href="css/update_form.css">
+    <title>Form - UPDATE</title>
 </head>
 
 <body>
+    <div class="upgrest">
     <?php 
         require_once "connectdb.php";
         $FORM_NO = $_GET['formid'];
@@ -50,29 +51,42 @@
         }
     ?>
     <div class="container">
+        <div class="bg">
+        
+        <div class="blinktext">
         <img src="img/mfulogo.png" style="width:auto; height:8rem;" class="mx-auto d-block mb-3 mt-3">
+        <br>
+        <br>
+        <div class="tra">
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">DIVISION OF REGISTRAR, MAE FAH LUANG UNIVERSITY</p>
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">Request Form for Maintaining Student Status</p>
-
+        </div>
+        </div>
         <!-- START FORM -->
         <form method="POST" style="font-family:ConcertOne;" onSubmit="JavaScript : return fncSubmit();">
             <!-- TOP PART -->
+
+      
+
             <div class="form-row mt-5">
                 <div class="form-group col-12">
                     <label class="mr-1">Semester: </label>
+
+                    <div class="pom">
                     <div class="form-check form-check-inline mr-1">
                         <input class="form-check-input" type="radio" name="semesteroption" id="firstsemester" value="First" <?php if($SEMESTER=='First'){ echo "checked=checked";} ?>>
-                        <label class="form-check-label" for="firstsemester">First</label>
+                        <label class="form-check-label" for="firstsemester"><span></span> First</label>
                     </div>
                     <div class="form-check form-check-inline mr-1">
                         <input class="form-check-input" type="radio" name="semesteroption" id="secondsemester" value="Second" <?php if($SEMESTER=='Second'){ echo "checked=checked";} ?>>
-                        <label class="form-check-label" for="secondsemester">Second</label>
+                        <label class="form-check-label" for="secondsemester"><span></span> Second</label>
                     </div>
                     <div class="form-check form-check-inline mr-1">
                         <input class="form-check-input" type="radio" name="semesteroption" id="summersemester" value="Summer" <?php if($SEMESTER=='Summer'){ echo "checked=checked";} ?>>
-                        <label class="form-check-label" for="summersemester">Summer</label>
+                        <label class="form-check-label" for="summersemester"><span></span> Summer</label>
                     </div>
                 </div>
+            </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-6">
@@ -107,10 +121,11 @@
             </div>
 
             <!-- (1) -->
+            <div class="pr">
             <div class="text-center">
-                <p class="mt-5" style="font-size:calc(0.5rem + 1vw);">(1) Student Information & Request</p>
+                <u><p class="mt-5" style="font-size:calc(0.5rem + 1vw);">(1) Student Information & Request</p></u>
             </div>
-
+            </div>
             <div class="form-row mt-5">
                 <div class="form-group col-12 col-sm-6">
                     <label for="std_id">Student ID</label>
@@ -183,15 +198,17 @@
                     <input type="tel" class="form-control" name="std_phone" id="std_phone" placeholder="087356xxxx" value="<?= $PHONE_NUMBER ?>">
                 </div>
             </div>
+<div class="pr">
 
             <div class="text-center">
-                <p class="mt-5" style="font-size:calc(0.5rem + 1vw);">Reason(s) for maintaining student status are</p>
+                <u><p class="mt-5" style="font-size:calc(0.5rem + 1vw);">Reason(s) for maintaining student status are</p></u>
             </div>
-
+            <br>
+            </div>
             <div class="form-row">
                 <div class="form-check form-check-inline mr-1">
                     <input class="form-check-input" type="radio" name="std_reason" id="std_reason_inprogess" value="In progess" <?php if($REASONS=='In progess'){ echo "checked=checked";} ?>>
-                    <label class="form-check-label" for="std_reason_inprogess">Receiving a P grade (In Progress)</label>
+                    <label class="form-check-label" for="std_reason_inprogess"><span></span> Receiving a P grade (In Progress)</label>
                 </div>
             </div>
             <div class="form-row mt-2">
@@ -207,7 +224,7 @@
             <div class="form-row">
                 <div class="form-check form-check-inline mr-1">
                     <input class="form-check-input" type="radio" name="std_reason" id="std_reason_other" value="Other Reason" <?php if($REASONS=='Other Reason'){ echo "checked=checked";} ?>>
-                    <label class="form-check-label" for="std_reason_other">Other Reason (Please Specify)</label>
+                    <label class="form-check-label" for="std_reason_other"><span></span> Other Reason (Please Specify)</label>
                 </div>
             </div>
             <div class="form-row mt-2">
@@ -216,13 +233,17 @@
                     <input type="text" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" placeholder="Specify your reason here" value="<?= $OTHER_EXPLAIN ?>">
                 </div>
             </div>
+
+           <div></div>
             <div class="form-row mt-2">
                 <button type="submit" name="btn_insert" class="btn btn-success" formaction="update_form_sql.php">Save</button>
 
                 <input type="hidden" name="STUDENT_ID" value="<?= $ST_ID ?>" readonly>
                 <input type="hidden" name="check" value="<?= $check ?>" readonly>
-                <button type="submit" class="btn btn-dark ml-3" formaction="list_form.php">Back</button>
+                <button type="submit" class="btn1 btn-dark ml-3" formaction="list_form.php">Back</button>
+               
             </div>
+
         </form>
         <br>
         <br>
@@ -232,5 +253,7 @@
     <script src="js/check_value.js"></script>
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    </div>
+    </div>
 </body>
 </html>
