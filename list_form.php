@@ -36,60 +36,7 @@ require_once "connectdb.php";
                         $HEADER = "REG-211 SUMMITED ($STUDENT_ID)";
                         $check = "ee11cbb19052e40b07aac0ca060c23ee";
                 }
-                $result = mysqli_query($conn,$sql);
-        ?>
-
-        <div class="form_table">
-
-        <div class="container main-container">
-               <br><br><br><br>
-        <div class="row mt-3">
-                <div class="col-2"></div>
-                <div class="col-8 text-center">
-                        <center>
-                        <div class="head">
-                        <u><p style="font-family: ConcertOne; font-size:calc(0.5rem + 1vw);"><?= $HEADER ?></p></u>
-                        </div>
-                        </center>
-                </div>
-                <div class="col-2"></div>
-        </div>
-        <br><br>
-        <div class="allform">
-        <div class="row mt-2 mb-2">
-                
-                <div class="newform col" style="font-family:ConcertOne;">
-                        <a href="reg211.php"><button class="btnewform btn btn-primary btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
-                </div>
-                
-        </div>
-        <br>
-        <div class="bgtable">
-        <div class="table-responsive-sm">
-        <table class="table table-bordered table-striped" style="font-family: ConcertOne;">
-                <thead class="table-warning">
-                <tr>
-                        <th scope="col">FORM NO.</th>
-                        <th scope="col">Student ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">School</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Reason</th>
-                        <th scope="col">Date Submit</th>
-                        <th scope="col">Control Panels</th>
-                </tr>
-                </thead>
-                <?php
-                if (mysqli_num_rows($result) > 0) {
-                        while($row = mysqli_fetch_assoc($result)) {
-                                $FORM_NO = $row["FORM_NO"];
-                                $ST_ID = $row["ST_ID"];
-                                $DATE = $row["DATE"];
-                                $FIRST_NAME = $row["FIRST_NAME"];
-                                $LAST_NAME = $row["LAST_NAME"];
-                                $ST_LEVEL = $row["ST_LEVEL"];
-                                $SCHOOL = $row["SCHOOL"];
-                                $REASONS = $row["REASONS"];
+                $result = mysqli_query($conn, $sql);
                 ?>
 
                 <div class="form_table">
