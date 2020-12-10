@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/thm.css">
     <link rel="stylesheet" href="css/reg211_ID.css">
-    <title>Form - REG211</title>
+    <title>AUTO INPUT FORM - REG211</title>
 </head>
 
 <body>
