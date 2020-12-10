@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/thm.css">
     <link rel="stylesheet" href="css/reg211_v2.css">
-    <title>Form - reg333</title>
+    <title>INPUT FORM - REG211</title>
 </head>
 <center>
 
