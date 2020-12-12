@@ -1,4 +1,19 @@
+.form {
+  background-color: rgb(222, 220, 223);
+  opacity: 0.8;
+  border-radius: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3px;
+ 
+}
 
+div.boxform-top {
+  background-color: #FF6666;
+  padding: 2px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
 
 .form-control{
   box-shadow: none;
@@ -134,7 +149,7 @@ div.logo{
 }
 
 .screen{
-  background-image:url("https://png.pngtree.com/png-vector/20191027/ourlarge/pngtree-cute-nature-landscape-vector-illustration-suitable-for-kids-background-png-image_1853289.jpg")  ;
+  background-image:url("../img/bg_reg211.jpg")  ;
   background-repeat: no-repeat;
   background-size: cover;
 }

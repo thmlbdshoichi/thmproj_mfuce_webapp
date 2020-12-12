@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/thm.css">
     <link rel="stylesheet" href="css/viewform.css">
-    <title>Form - REG211</title>
+    <title>Form - REG211 (Read-only)</title>
 </head>
 
 <body>
@@ -51,9 +51,7 @@
       
 
             <div class="container">
-                <br><br><br><br><br><br><br><br><br>
-                
-                
+                <br><br>
                     <div class="bg_logo">
         
                     <img src="img/mfulogo.png" style="width:auto; height:8rem;" class="mx-auto d-block mb-3 mt-3">

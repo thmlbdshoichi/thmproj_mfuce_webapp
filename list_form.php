@@ -40,9 +40,8 @@ require_once "connectdb.php";
                 ?>
 
                 <div class="form_table">
-
                         <div class="container main-container">
-                                <br><br><br><br><br>
+                                <br><br>
                                 <div class="row mt-3">
                                         <div class="col-2"></div>
                                         <div class="col-8 text-center">
@@ -121,8 +120,8 @@ require_once "connectdb.php";
                                                 </div>
                                         </div>
                                         <div class="row mt-2 mb-2">
-                                                <div class="back col" style="font-family:ConcertOne;">
-                                                        <a href="index.html"><button class=" btback btn btn-dark btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">BACK</button></a>
+                                                <div class="col" style="font-family:ConcertOne;">
+                                                        <a href="index.html"><button class="btn-lg btn-warning btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">BACK</button></a>
                                                 </div>
                                         </div>
                                 </div>

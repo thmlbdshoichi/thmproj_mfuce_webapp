@@ -118,7 +118,7 @@ input[type="radio"]:checked + label span {
 }
 
 .upgrest {
-  background-image: url("https://t4.ftcdn.net/jpg/02/92/60/75/360_F_292607549_9rpMXDGaIgsh5feoUumQDU6vgxbKWnjW.jpg");
+  background-image: url("../img/bg_updateform.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

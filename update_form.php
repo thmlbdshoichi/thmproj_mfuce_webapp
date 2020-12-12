@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/update.css">
-    <title>Form - UPDATE</title>
+    <title>Form - REG211 (UPDATE)</title>
 </head>
 
 <body>

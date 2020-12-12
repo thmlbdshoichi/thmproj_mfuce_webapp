@@ -4,13 +4,13 @@
     }
     
     .fullscreen {
-        background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-fashion-simple-small-fresh-background-promotion-main-map-image_157142.jpg');
+        background-image: url('../img/bg_listform.jpg');
         background-repeat: no-repeat;
         -webkit-background-size: cover;
         background-size: cover;
         background-position: center;
         width: 100%;
-        height: 800px;
+        height: 1600px;
        
        
     }
@@ -75,7 +75,7 @@
     }
  
     .bgtable {
-        background-color: rgb(250, 176, 225);
+        /*background-color: rgb(250, 176, 225);*/
     }
     
     .allform {

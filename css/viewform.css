@@ -1,5 +1,5 @@
         .fullscreen {
-            background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-minimal-spring-plant-border-green-background-image_201967.jpg');
+            background-image: url("../img/bg_viewform.jpg");
             background-repeat: no-repeat;
             -webkit-background-size: cover;
             background-size: cover;
@@ -15,7 +15,6 @@
             padding-left: 50px;
             padding-right: 50px;
             padding-top: 3px;
-          
             opacity: 0.7;
         }
         

@@ -35,7 +35,7 @@
 
         <div class="container">
             
-                <div class=" logo">
+                <div class="logo">
                     <div>
                     <img src="img/mfulogo.png" style="width:auto; height:8rem;" class="mx-auto d-block mb-3 mt-3">
                     </div>
@@ -201,7 +201,7 @@
                                                 $AD_FNAME = $row["AD_FNAME"];
                                                 $AD_LNAME = $row["AD_LNAME"];
                                     ?>
-                                                <option value="<?= $AD_ID ?>"><?= $AD_FNAME ?><?= $AD_LNAME ?></option>
+                                                <option value="<?= $AD_ID ?>"><?= $AD_FNAME ?> <?= $AD_LNAME ?></option>
                                     <?php
                                             }
                                         }
@@ -218,7 +218,7 @@
                                                 $DEAN_AD_FNAME = $row["AD_FNAME"];
                                                 $DEAN_AD_LNAME = $row["AD_LNAME"];
                                     ?>
-                                                <option value="<?= $DEAN_AD_FNAME.$DEAN_AD_LNAME ?>"><?= $DEAN_AD_FNAME ?><?= $DEAN_AD_LNAME ?></option>
+                                                <option value="<?= $DEAN_AD_FNAME.$DEAN_AD_LNAME ?>"><?= $DEAN_AD_FNAME ?> <?= $DEAN_AD_LNAME ?></option>
                                     <?php
                                             }
                                         }
@@ -234,8 +234,7 @@
 
                         <div class="text-center">
                             <u>
-                                <p class=" head1 mt-5" style="font-size:calc(0.5rem + 1vw);">Reason(s) for maintaining
-                                    student status are</p>
+                                <p class=" head1 mt-5" style="font-size:calc(0.5rem + 1vw);">Reason(s) for maintaining student status are</p>
                             </u>
                         </div>
 
