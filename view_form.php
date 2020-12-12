@@ -16,6 +16,7 @@
         <?php 
             require_once "connectdb.php";
             $FORM_NO = $_GET['formid'];
+            $check = $_GET['check'];
 
             $sql_selectall = "SELECT * FROM input_form WHERE FORM_NO = $FORM_NO";
         
@@ -198,6 +199,7 @@
                         </div>
                         <div class="form-row mt-2">
                             <input type="hidden" name="STUDENT_ID" value="<?= $ST_ID ?>" readonly>
+                            <input type="hidden" name="check" value="<?= $check ?>" readonly>
                             <button type="submit" name="btn_back" class="btn btn-dark">Back</button>
                         </div>
                         <br><br>

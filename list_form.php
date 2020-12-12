@@ -18,7 +18,10 @@ require_once "connectdb.php";
 <body>
 
         <div class="fullscreen">
+
                 <?php
+                $checkback = $_POST['check'];
+
                 if (!empty($_POST['STUDENT_ID'])) {
                         $STUDENT_ID = $_POST['STUDENT_ID'];
                 } elseif (!empty($_GET['stid'])) {
@@ -27,7 +30,7 @@ require_once "connectdb.php";
                         $STUDENT_ID = NULL;
                 }
 
-                if ($STUDENT_ID == 'ADMIN' or $STUDENT_ID == '221' or $STUDENT_ID == 'admin') {
+                if ($STUDENT_ID == 'ADMIN' or $STUDENT_ID == '221' or $STUDENT_ID == 'admin' or $checkback == '21232f297a57a5a743894a0e4a801fc3') {
                         $sql = "SELECT FORM_NO, ST_ID, DATE, FIRST_NAME, LAST_NAME, ST_LEVEL, SCHOOL, REASONS FROM input_form";
                         $HEADER = "LIST ALL REG-211 (ADMIN PANEL)";
                         $check = "21232f297a57a5a743894a0e4a801fc3";
@@ -102,7 +105,7 @@ require_once "connectdb.php";
                                                                                         <td><?= $DATE ?></td>
                                                                                         <td class="text-center">
                                                                                                 <a href="form_print.php?formid=<?= $FORM_NO ?>"><i class="fa fa-print" style="font-size:1.5rem"></i></a>
-                                                                                                <a href="view_form.php?formid=<?= $FORM_NO ?>"><i class="fa fa-eye" style="font-size:1.5rem"></i></a>
+                                                                                                <a href="view_form.php?formid=<?= $FORM_NO ?>&check=<?= $check ?>"><i class="fa fa-eye" style="font-size:1.5rem"></i></a>
                                                                                                 <a href="update_form.php?formid=<?= $FORM_NO ?>&check=<?= $check ?>"><i class="fa fa-pencil-square" style="font-size:1.5rem"></i></a>
                                                                                                 <a href="delete_form_sql.php?formid=<?= $FORM_NO ?>&stid=<?= $ST_ID ?>&check=<?= $check ?>" onClick="return confirm('Warning: Are you sure deleting this form?');"><i class="fa fa-trash" style="font-size:1.5rem"></i></a>
                                                                                         </td>
