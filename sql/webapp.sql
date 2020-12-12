@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2020 at 04:23 PM
+-- Generation Time: Dec 12, 2020 at 05:22 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -122,8 +122,7 @@ INSERT INTO `input_form` (`FORM_NO`, `DATE`, `SEMESTER`, `ACADEMIC_YEAR`, `ST_ID
 (67, '2020-11-25', 'Summer', 2020, '6131112016', 'Mr.', 'Anukoon', 'Charoendee ', 'Undergraduate', 'School of Science', 'School of Science', 'Materials Engineering', '0829691123', 'Other Reason', '', '', 'In progess of internship to England'),
 (68, '2020-11-29', 'First', 2020, '6131501035', 'Mr.', 'Piya', 'Jairat ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0871412555', 'In progess', '1501312', 'Web Application Development', ''),
 (76, '2020-12-12', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'In progess', '1502221', 'Genesis of algorithmic advanced', ''),
-(80, '2020-12-12', 'Summer', 2020, '6131501065', 'Miss', 'Apichaya', 'Sainak', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0829014785', 'In progess', '1501020', 'Web Application Analysis', ''),
-(81, '2020-12-12', 'Summer', 2020, '6131501065', 'Miss', 'Apichaya', 'Sainak', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0829014785', 'In progess', '1501021', 'Web Application Analysis', '');
+(80, '2020-12-12', 'Summer', 2020, '6131501065', 'Miss', 'Apichaya', 'Sainak', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0829014785', 'In progess', '1501020', 'Web Application Analysis', '');
 
 -- --------------------------------------------------------
 
@@ -271,7 +270,10 @@ ALTER TABLE `courses`
 -- Indexes for table `input_form`
 --
 ALTER TABLE `input_form`
-  ADD PRIMARY KEY (`FORM_NO`);
+  ADD PRIMARY KEY (`FORM_NO`),
+  ADD KEY `DEAN` (`DEAN`),
+  ADD KEY `SCHOOL` (`SCHOOL`),
+  ADD KEY `PROGRAM` (`PROGRAM`);
 
 --
 -- Indexes for table `program`
@@ -328,6 +330,14 @@ ALTER TABLE `advisor`
 --
 ALTER TABLE `courses`
   ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`AD_ID`) REFERENCES `advisor` (`AD_ID`);
+
+--
+-- Constraints for table `input_form`
+--
+ALTER TABLE `input_form`
+  ADD CONSTRAINT `input_form_ibfk_1` FOREIGN KEY (`DEAN`) REFERENCES `school` (`SCHOOL_NAME`),
+  ADD CONSTRAINT `input_form_ibfk_2` FOREIGN KEY (`SCHOOL`) REFERENCES `school` (`SCHOOL_NAME`),
+  ADD CONSTRAINT `input_form_ibfk_3` FOREIGN KEY (`PROGRAM`) REFERENCES `program` (`PRO_NAME`);
 
 --
 -- Constraints for table `program`
