@@ -20,14 +20,18 @@
         require_once "connectdb.php";
         $sql_SCHOOL = "SELECT SCHOOL_NAME, SCHOOL_ID FROM school ORDER BY `SCHOOL_ID` ASC;";
         $sql_PROGRAM = "SELECT PRO_NAME, SCHOOL_ID FROM program ORDER BY `SCHOOL_ID` ASC;";
+        $sql_advisor = "SELECT * FROM advisor ORDER BY `AD_FNAME` ASC;";
+        $sql_dean = "SELECT * FROM advisor WHERE isDEAN = 1 ORDER BY `AD_FNAME` ASC;";
         /*$sql_C_CODE = "SELECT COURSE_CODE FROM courses;";
         $sql_C_TITLE = "SELECT COURSE_TITLE FROM courses;";*/
 
         $result_SCHOOL = mysqli_query($conn,$sql_SCHOOL);
         $result_SCHOOL_2 = mysqli_query($conn,$sql_SCHOOL);
         $result_PROGRAM = mysqli_query($conn,$sql_PROGRAM);
+        $result_advisor = mysqli_query($conn,$sql_advisor);
+        $result_dean = mysqli_query($conn,$sql_dean);
 
-    ?>
+        ?>
 
         <div class="container">
             
@@ -183,7 +187,45 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-12  col-sm-4">
+                            <div class="form-group col-12  col-sm-3">
+                                <label for="std_gpax">GPAX</label>
+                                <input type="number" step="0.01" min="0.00" max="4.00" class="form-control" name="std_gpax" id="std_gpax" placeholder="4.00">
+                            </div>
+                            <div class="form-group col-12  col-sm-3">
+                                <label for="std_advisor">Adviser</label>
+                                <select name="std_advisor" class="form-control" id="std_advisor" required>
+                                    <?php
+                                        if (mysqli_num_rows($result_advisor) > 0) {
+                                            while($row = mysqli_fetch_assoc($result_advisor)) {
+                                                $AD_ID = $row["AD_ID"];
+                                                $AD_FNAME = $row["AD_FNAME"];
+                                                $AD_LNAME = $row["AD_LNAME"];
+                                    ?>
+                                                <option value="<?= $AD_ID ?>"><?= $AD_FNAME ?><?= $AD_LNAME ?></option>
+                                    <?php
+                                            }
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="form-group col-12  col-sm-3">
+                                <label for="std_deanname">Dean Name</label>
+                                <select name="std_deanname" class="form-control" id="std_deanname" required>
+                                    <?php
+                                        if (mysqli_num_rows($result_dean) > 0) {
+                                            while($row = mysqli_fetch_assoc($result_dean)) {
+                                                $DEAN_AD_ID = $row["AD_ID"];
+                                                $DEAN_AD_FNAME = $row["AD_FNAME"];
+                                                $DEAN_AD_LNAME = $row["AD_LNAME"];
+                                    ?>
+                                                <option value="<?= $DEAN_AD_FNAME.$DEAN_AD_LNAME ?>"><?= $DEAN_AD_FNAME ?><?= $DEAN_AD_LNAME ?></option>
+                                    <?php
+                                            }
+                                        }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="form-group col-12  col-sm-3">
                                 <label for="std_phone">Phone Number</label>
                                 <input type="tel" class="form-control" name="std_phone" id="std_phone"
                                     placeholder="087356xxxx">
@@ -235,11 +277,12 @@
 
                         <div class="form-row center mt-2">
 
-                            <button type="submit" name="btn_insert" class="button ml-2">Save</button>
-                            <button type="Reset" class="button1 ml-2">Reset Data</button>
-                            <a href="index.html"><button type="button" class="button2 ml-2">Back</button></a>
+                            <button type="submit" name="btn_insert" class="button ml-1">Save</button>
+                            <button type="Reset" class="button1 ml-1">Reset Data</button>
+                            <a href="index.html"><button type="button" class="button2 ml-1">Back</button></a>
 
                         </div>
+                        <br><br>
                     </form>
                 </div>
             </div>

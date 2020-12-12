@@ -202,6 +202,7 @@
                             <input type="hidden" name="STUDENT_ID" value="<?= $ST_ID ?>" readonly>
                             <button type="submit" name="btn_back" class="btn btn-dark">Back</button>
                         </div>
+                        <br><br>
                     </form>
                     </div>
                     </div>

@@ -220,13 +220,12 @@
                         </div>
                         <div class="form-row mt-2">
                             <button type="submit" name="btn_insert" class="btn btn-success">Save</button>
-                            <button type="Reset" class="btn btn-danger ml-3">Reset Data</button>
-                            <a href="index.html"><button type="button" class="btn btn-dark ml-3">Back</button></a>
+                            <button type="Reset" class="btn btn-danger ml-1">Reset Data</button>
+                            <a href="index.html"><button type="button" class="btn btn-dark ml-1">Back</button></a>
                         </div>
                     </form>
                     <br>
-                    <br>
-                
+                    <br> 
             </div>
         </div>
     </div>
