@@ -1,186 +1,197 @@
 
 
 .form-control{
-    box-shadow: none;
-    background-color: rgb(252, 252, 255);
-    border-radius: 0px;
-    border-color: rgb(223, 8, 8);
-    border-style: none none solid none;
-    width: 80%;
-    transition: all .5s;
-   
-  }
-  .form-group>label{
-    text-shadow: 0 0 0.2em rgb(248, 250, 129), 0 0 0.2em rgb(250, 224, 141);
-    
-  }
-  
-  .form-control:focus{
-   
-    border-color: var(--font-hover-color);
-    outline: none;
-  }
-  .form-control:invalid{
-    border-color: red;
-  }
-  .form-group:focus-within{
-     transform: scale(1.1,1.1);
-  }
-  .form-group{
-    text-align: left;
-  }
-  #bg {
+  box-shadow: none;
+  background-color: rgb(252, 252, 255);
+  border-radius: 0px;
+  border-color: rgb(230, 47, 47);
+  border-style: none none solid none;
+  width: 100%;
+  transition: all .5s;
  
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    width:100%;
-    height:2000px;
-    opacity:0.2;
-  }
-  input[type="radio"] {
-    display:none;
-    
+}
+.form-group>label{
+  text-shadow: 0 0 0.2em rgb(236, 10, 10), 0 0 0.2em rgb(241, 49, 177);
+  
+}
+
+.form-control:focus{
+ 
+  border-color: var(--font-hover-color);
+  outline: none;
+}
+.form-control:invalid{
+  border-color: red;
+}
+.form-group:focus-within{
+   transform: scale(1.1,1.1);
+}
+.form-group{
+  text-align: left;
+}
+#bg {
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width:100%;
+  height:2000px;
+  opacity:0.2;
+}
+input[type="radio"] {
+  display:none;
+  
 }
 
 input[type="radio"] + label {
-    color:#0c0a0a;
-    /*text-shadow: 0 0 0.2em rgb(252, 249, 82), 0 0 0.2em #F87*/
-    
+  color:#0c0a0a;
+  /*text-shadow: 0 0 0.2em rgb(252, 249, 82), 0 0 0.2em #F87*/
+  
 }
 
 input[type="radio"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-2px 10px 0 0;
-    vertical-align:middle;
-    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
-    cursor:pointer;
+  display:inline-block;
+  width:19px;
+  height:19px;
+  margin:-2px 10px 0 0;
+  vertical-align:middle;
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
+  cursor:pointer;
 }
 
 input[type="radio"]:checked + label span {
-    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
 }
 
 /*.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;	
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;	
+text-decoration: none;
+outline: none;
+color: #fff;
+background-color: #4CAF50;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
 }
 
 .button:hover {background-color: #3e8e41}
 
 .button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+background-color: #3e8e41;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
 }*/
 
 .button{
-  width: 100px;
-  height: 50px;
-  font-size: 15px;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #4CAF50;
-  border: 5px #4CAF50;
-  border-style: outset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+width: 100px;
+height: 50px;
+font-size: 15px;
+border-radius: 20px;
+background-color: transparent;
+color: #200317;
+border: 5px #10a10a;
+border-style: outset;
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
 .button:hover{
-  background-color: rgb(81, 255, 0);
-  box-shadow: 0 0 25  rgb(81, 255, 0) ;
-  color: #0c0a0a;
+background-color: rgb(90, 230, 86);
+box-shadow: 0 0 25  rgb(223, 33, 160) ;
+color: #0c0a0a;
 }
 
 .button1{
-  width: 100px;
-  height: 50px;
-  font-size: 15px;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #f11919;
-  border: 5px  #f11919;
-  border-style: outset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+width: 100px;
+height: 50px;
+font-size: 15px;
+border-radius: 20px;
+background-color: transparent;
+color: #f11919;
+border: 5px  #f11919;
+border-style: outset;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .button1:hover{
-  background-color: rgb(248, 59, 154);
-  box-shadow: 0 0 25  rgb(247, 39, 39) ;
-  color: #0c0a0a;
+background-color: rgb(248, 229, 59);
+box-shadow: 0 0 25  rgb(247, 39, 39) ;
+color: #0c0a0a;
 }
 
 .button2{
-  width: 100px;
-  height: 50px;
-  font-size: 15px;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #150d85;
-  border: 5px #150d85;
-  border-style: outset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+width: 100px;
+height: 50px;
+font-size: 15px;
+border-radius: 20px;
+background-color: transparent;
+color: #150d85;
+border: 5px #150d85;
+border-style: outset;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .button2:hover{
-  background-color: rgb(59, 149, 252);
-  box-shadow: 0 0 25em rgb(169, 245, 245) ;
-  color: #0c0a0a;
+background-color: rgb(59, 149, 252);
+box-shadow: 0 0 25em rgb(169, 245, 245) ;
+color: #0c0a0a;
 }
 
+
 p.head1{
-  text-shadow: 0 0 0.2em rgb(253, 253, 121), 0 0 0.2em #F87
+text-shadow: 0 0 0.2em rgb(238, 30, 238), 0 0 0.2em rgb(26, 219, 233)
 }
 
 
 div.logo{
-  background-color: rgb(221, 189, 5);  
-  padding:2px;   
+  background-color: white;
+  padding: 2px;
+  opacity: 0.7;
+  filter: alpha(opacity=40);
+   
 
 }
 
-body{
-  background-color:#CC0000;
-  color: rgb(138, 118, 8);
+.screen{
+ 
+  background-image:url("https://png.pngtree.com/png-vector/20191027/ourlarge/pngtree-cute-nature-landscape-vector-illustration-suitable-for-kids-background-png-image_1853289.jpg")  ;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .wt{
   background-color: white;
+  opacity: 0.7;
+  filter: alpha(opacity=40);
 }
 
+
+
 .pad{
-  padding-left: 100px;
-  padding-right: none;
-  padding-bottom: 1.5rem;
+padding-left: 5%;
+padding-right: 5%;
+padding-bottom: 1.5rem;
 }
 .reason{
-  width: 90%;
+width: 100%;
 }
 
 
 .blinktext{
-  animation: mymove 8s infinite;
+animation: mymove 5s infinite;
 }
 @keyframes mymove{
-  80% {
-    text-shadow: 0 0 0.2em rgb(243, 229, 28), 0 0 0.2em rgb(252, 147, 86)
-  }
+80% {
+  text-shadow: 0 0 0.2em rgb(28, 243, 39), 0 0 0.2em rgb(30, 139, 8)
+}
 }

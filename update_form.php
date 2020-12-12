@@ -55,12 +55,10 @@
         
         <div class="blinktext">
         <img src="img/mfulogo.png" style="width:auto; height:8rem;" class="mx-auto d-block mb-3 mt-3">
-        <br>
-        <br>
-        <div class="tra">
+        
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">DIVISION OF REGISTRAR, MAE FAH LUANG UNIVERSITY</p>
         <p class="text-center" style="font-size:calc(0.5rem + 1vw); font-family:ConcertOne;">Request Form for Maintaining Student Status</p>
-        </div>
+        
         </div>
         <!-- START FORM -->
         <form method="POST" style="font-family:ConcertOne;" onSubmit="JavaScript : return fncSubmit();">
