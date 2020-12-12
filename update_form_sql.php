@@ -54,7 +54,7 @@ WHERE FORM_NO = $FORM_ID";
 $result = mysqli_query($conn,$sql);
 
 if (!$result){
-    die('Error: ' . mysql_error($conn));
+    die('Error: ' . mysqli_error($conn));
 }
 else {
     if($check == "21232f297a57a5a743894a0e4a801fc3")
