@@ -1,8 +1,8 @@
 <?php
 //Database Information
-$servername = "localhost";
+$servername = "127.0.0.1:3307";
 $username="root";
-$password="12345";
+$password="";
 $dbname ="webapp";
 
 // Create connection

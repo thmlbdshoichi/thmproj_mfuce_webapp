@@ -12,10 +12,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             border-radius: 8px;
-            padding-left: 100px;
+            padding-left: 50px;
             padding-right: 50px;
             padding-top: 3px;
-            padding-bottom: 3px;
+          
             opacity: 0.7;
         }
         
@@ -58,7 +58,7 @@
             border-radius: 0px;
             border-color: rgb(243, 11, 204);
             border-style: none none solid none;
-            width: 80%;
+            width: 100%;
             transition: all .5s;
         }
         

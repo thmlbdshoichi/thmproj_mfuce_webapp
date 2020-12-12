@@ -22,9 +22,10 @@ p {
     background-color: rgb(222, 220, 223);
     opacity: 0.9;
     border-radius: 5px;
-    padding-left: 60px;
-    padding-right: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 3px;
+   
 }
 
 .form-control {
@@ -33,7 +34,7 @@ p {
     border-radius: 0px;
     border-color: rgb(223, 8, 8);
     border-style: none none solid none;
-    width: 80%;
+    width: 100%;
     transition: all .5s;
 }
 
@@ -105,7 +106,7 @@ u {
 }
 
 .textreason {
-    width: 90%;
+    width: 100%;
 }
 .pad{
      padding-left: 60px;

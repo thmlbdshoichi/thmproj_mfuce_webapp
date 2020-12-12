@@ -142,7 +142,7 @@
                             </div>
                             <div class="form-group col-sm-5">
                                 <label for="std_lastname">Lastname</label>
-                                <input type="text" class="form-control" name="std_lastname" id="std_lastname" placeholder="Lastname" value="<?= $L_NAME ?>">
+                                <input type="text" class="lastname form-control" name="std_lastname" id="std_lastname" placeholder="Lastname" value="<?= $L_NAME ?>">
                             </div>
                         </div>
 
