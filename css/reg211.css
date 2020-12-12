@@ -67,7 +67,7 @@ width: 100px;
 height: 50px;
 font-size: 15px;
 border-radius: 20px;
-background-color: transparent;
+background-color: #7bfd77;
 color: #200317;
 border: 5px #10a10a;
 border-style: outset;
@@ -88,8 +88,8 @@ width: 100px;
 height: 50px;
 font-size: 15px;
 border-radius: 20px;
-background-color: transparent;
-color: #f11919;
+background-color: #f58888;
+color: #000000;
 border: 5px  #f11919;
 border-style: outset;
 display: flex;
@@ -108,8 +108,8 @@ width: 100px;
 height: 50px;
 font-size: 15px;
 border-radius: 20px;
-background-color: transparent;
-color: #150d85;
+background-color:  #695eff;;
+color: #000000;
 border: 5px #150d85;
 border-style: outset;
 display: flex;
@@ -130,29 +130,14 @@ text-shadow: 0 0 0.2em rgb(238, 30, 238), 0 0 0.2em rgb(26, 219, 233)
 
 
 div.logo{
-  background-color: white;
   padding: 2px;
-  opacity: 0.7;
-  filter: alpha(opacity=40);
-   
-
 }
 
 .screen{
- 
   background-image:url("https://png.pngtree.com/png-vector/20191027/ourlarge/pngtree-cute-nature-landscape-vector-illustration-suitable-for-kids-background-png-image_1853289.jpg")  ;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.wt{
-  background-color: white;
-  opacity: 0.7;
-  filter: alpha(opacity=40);
-}
-
-
-
 .pad{
 padding-left: 5%;
 padding-right: 5%;

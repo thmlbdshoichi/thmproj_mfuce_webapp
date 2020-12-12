@@ -195,7 +195,7 @@
                         <div class="form-row mt-2">
                             <div class="form-group col-12">
                                 <label for="std_reason">Reason</label>
-                                <input type="text" class=" reason form-control" name="std_reason_other_explain" id="std_reason_other_explain" value="<?= $OTHER_EXPLAIN ?>" readonly>
+                                <input type="text" class="reason form-control" name="std_reason_other_explain" id="std_reason_other_explain" value="<?= $OTHER_EXPLAIN ?>" readonly>
                             </div>
                         </div>
                         <div class="form-row mt-2">

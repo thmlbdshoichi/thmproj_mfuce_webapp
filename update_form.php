@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/update_form.css">
+    <link rel="stylesheet" href="css/update.css">
     <title>Form - UPDATE</title>
 </head>
 
@@ -250,27 +250,21 @@
                             <input type="text" class="form-control" name="std_reason_other_explain" id="std_reason_other_explain" placeholder="Specify your reason here" value="<?= $OTHER_EXPLAIN ?>">
                         </div>
                     </div>
-
                     <div></div>
                     <div class="form-row mt-2">
                         <button type="submit" name="btn_insert" class="btn btn-success" formaction="update_form_sql.php">Save</button>
-
                         <input type="hidden" name="STUDENT_ID" value="<?= $ST_ID ?>" readonly>
                         <input type="hidden" name="check" value="<?= $check ?>" readonly>
                         <button type="submit" class="btn1 btn-dark ml-3" formaction="list_form.php">Back</button>
-
                     </div>
-
                 </form>
                 <br>
                 <br>
-
             </div>
-
-            <script src="js/check_value.js"></script>
-            <script src="js/jquery.slim.min.js"></script>
-            <script src="js/bootstrap.bundle.min.js"></script>
         </div>
+        <script src="js/check_value.js"></script>
+        <script src="js/jquery.slim.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
     </div>
 </body>
 
