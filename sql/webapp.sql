@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2020 at 05:22 PM
+-- Generation Time: Dec 12, 2020 at 06:02 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -57,34 +57,15 @@ INSERT INTO `advisor` (`AD_ID`, `AD_FNAME`, `AD_LNAME`, `SCHOOL_ID`, `isDean`) V
 (15, 'Uraiwan', 'Intatha', 2, 1),
 (16, 'Supakorn', 'Rojananin', 9, 1),
 (17, 'Teeraparp', 'Predeepoch', 12, 1),
-(18, 'Chatrudee', 'Jongsureyapart', 4, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `courses`
---
-
-CREATE TABLE `courses` (
-  `COURSE_CODE` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-  `COURSE_TITLE` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `CREDIT` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `AD_ID` int(25) NOT NULL,
-  `SCHOOL_ID` int(33) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `courses`
---
-
-INSERT INTO `courses` (`COURSE_CODE`, `COURSE_TITLE`, `CREDIT`, `AD_ID`, `SCHOOL_ID`) VALUES
-('1501312', '  Web Application Development', '3 (2-2-5)', 1, 1),
-('1501313', '  Computational Intelligence', '3 (2-2-5)', 4, 1),
-('1501314', '  Smart Devices and Internet of Things', '3 (2-2-5)', 5, 1),
-('1501345', '  Network System Security', '3 (2-2-5)', 3, 1),
-('1501405', '  Modern Topics in Embedded Systems', '3 (3-0-6)', 2, 1),
-('1501410', '  Data Science and Artificial Intelligence', '3 (2-2-5)', 1, 1),
-('2302102', '  Man and Society', '3 (3-0-6)', 6, 14);
+(18, 'Chatrudee', 'Jongsureyapart', 4, 1),
+(19, 'Saroat', 'Rawdkuen', 5, 1),
+(20, 'Rung', 'Srisomwong', 3, 1),
+(21, 'Phanupong', 'Chaiwut', 6, 1),
+(22, 'Rachanee', 'Sunsern', 7, 1),
+(23, 'Chomnard', 'Potjanamart', 8, 1),
+(24, 'Narong', 'Lumbikanonda', 10, 1),
+(25, 'Siriporn', 'Wajjwalku', 11, 1),
+(26, 'Sulukkana', 'Noiprasert', 13, 1);
 
 -- --------------------------------------------------------
 
@@ -117,11 +98,10 @@ CREATE TABLE `input_form` (
 --
 
 INSERT INTO `input_form` (`FORM_NO`, `DATE`, `SEMESTER`, `ACADEMIC_YEAR`, `ST_ID`, `PREFIX`, `FIRST_NAME`, `LAST_NAME`, `ST_LEVEL`, `DEAN`, `SCHOOL`, `PROGRAM`, `PHONE_NUMBER`, `REASONS`, `COURSE_CODE`, `COURSE_TITLE`, `OTHER_EXPLAIN`) VALUES
-(62, '2020-11-29', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'Other Reason', '', '', 'Internship aboard will be back soon'),
+(62, '2020-11-29', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'Other Reason', '', '', 'Internship aboard will be back soon na kub'),
 (65, '2020-11-29', 'Summer', 2020, '6132101009', 'Miss', 'Boonraksa', 'Panyadee ', 'Undergraduate', 'School of Medicine', 'School of Medicine', 'Medicine', '0835549087', 'Other Reason', '', '', 'In progess of internship in Hospital'),
 (67, '2020-11-25', 'Summer', 2020, '6131112016', 'Mr.', 'Anukoon', 'Charoendee ', 'Undergraduate', 'School of Science', 'School of Science', 'Materials Engineering', '0829691123', 'Other Reason', '', '', 'In progess of internship to England'),
 (68, '2020-11-29', 'First', 2020, '6131501035', 'Mr.', 'Piya', 'Jairat ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0871412555', 'In progess', '1501312', 'Web Application Development', ''),
-(76, '2020-12-12', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'In progess', '1502221', 'Genesis of algorithmic advanced', ''),
 (80, '2020-12-12', 'Summer', 2020, '6131501065', 'Miss', 'Apichaya', 'Sainak', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0829014785', 'In progess', '1501020', 'Web Application Analysis', '');
 
 -- --------------------------------------------------------
@@ -259,14 +239,6 @@ ALTER TABLE `advisor`
   ADD KEY `SCHOOL_ID` (`SCHOOL_ID`);
 
 --
--- Indexes for table `courses`
---
-ALTER TABLE `courses`
-  ADD PRIMARY KEY (`COURSE_CODE`),
-  ADD KEY `SCHOOL_ID` (`SCHOOL_ID`),
-  ADD KEY `AD_ID` (`AD_ID`);
-
---
 -- Indexes for table `input_form`
 --
 ALTER TABLE `input_form`
@@ -307,7 +279,7 @@ ALTER TABLE `student_detail`
 -- AUTO_INCREMENT for table `advisor`
 --
 ALTER TABLE `advisor`
-  MODIFY `AD_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `AD_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `input_form`
@@ -324,12 +296,6 @@ ALTER TABLE `input_form`
 --
 ALTER TABLE `advisor`
   ADD CONSTRAINT `advisor_ibfk_1` FOREIGN KEY (`SCHOOL_ID`) REFERENCES `school` (`SCHOOL_ID`);
-
---
--- Constraints for table `courses`
---
-ALTER TABLE `courses`
-  ADD CONSTRAINT `courses_ibfk_1` FOREIGN KEY (`AD_ID`) REFERENCES `advisor` (`AD_ID`);
 
 --
 -- Constraints for table `input_form`
