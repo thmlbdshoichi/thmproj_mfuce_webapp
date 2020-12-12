@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2020 at 12:30 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Dec 12, 2020 at 09:10 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,7 +47,11 @@ INSERT INTO `advisor` (`AD_ID`, `AD_FNAME`, `AD_LNAME`, `SCHOOL_ID`) VALUES
 (6, 'Thanyatorn', 'Saipanya ', 4),
 (7, 'Panate', 'Manomaiwiboon', 2),
 (8, 'Roungsan', 'Chaisricharoen', 1),
-(9, 'Patcharin', 'Pingmuangkaew', 9);
+(9, 'Patcharin', 'Pingmuangkaew', 9),
+(10, 'Fabio ', 'Calzolari', 11),
+(11, 'Apirak', 'Nusitchaiyakarn', 12),
+(12, 'Noraset', 'Polsin', 4),
+(13, 'Phanintra', 'Teeranon', 14);
 
 -- --------------------------------------------------------
 
@@ -222,10 +226,17 @@ CREATE TABLE `student_detail` (
 --
 
 INSERT INTO `student_detail` (`ST_ID`, `PREFIX`, `F_NAME`, `L_NAME`, `SCHOOL_NAME`, `PRO_NAME`, `GPAX`, `AD_ID`, `DEAN`, `STATUS`, `PHONE_NO`) VALUES
+('4751011008', 'Mrs.', 'Ussamanee', 'Chomphubool', 'School of Liberal Arts', 'Arts Program in English', 4, 13, 'Jiraporn Intrasai', 'Graduate', '0813589920'),
+('4831501034', 'Mr.', 'Pharuhat', 'Boonchomphu', 'School of Information Technology', 'Computer Engineering', 3.43, 8, 'Teeravisit Laohapensaeng', 'Graduate', '0845861792'),
+('5131210001', 'Miss', 'Kanokwanasa', 'Chomphubool', 'School of Management', 'Aviation Business Management', 4, 12, 'Chatrudee Jongsureyapart', 'Graduate', '0859592240'),
 ('6131112016', 'Mr.', 'Anukoon', 'Charoendee', 'School of Science', 'Materials Engineering', 4, 7, 'Uraiwan Intatha', 'Undergraduate', '0829691123'),
+('6131501016', 'Miss', 'Natthida', 'Patlee', 'School of Information Technology', 'Computer Engineering', 3.95, 3, 'Teeravisit Laohapensaeng', 'Undergraduate', '0821234555'),
 ('6131501035', 'Mr.', 'Piya', 'Jairat', 'School of Information Technology', 'Computer Engineering', 3.41, 1, 'Teeravisit Laohapensaeng', 'Undergraduate', '0871412555'),
+('6131501054', 'Miss', 'Wirakan', 'Keawkanya', 'School of Information Technology', 'Computer Engineering', 3.82, 2, 'Teeravisit Laohapensaeng', 'Undergraduate', '0895025418'),
 ('6131501066', 'Mr.', 'Arunwat', 'Moonbung', 'School of Information Technology', 'Computer Engineering', 4, 8, 'Teeravisit Laohapensaeng', 'Undergraduate', '0877892840'),
-('6132101009', 'Miss', 'Boonraksa', 'Panyadee', 'School of Medicine', 'Medicine', 4, 9, 'Supakorn Rojananin', 'Undergraduate', '0835549087');
+('6132101009', 'Miss', 'Boonraksa', 'Panyadee', 'School of Medicine', 'Medicine', 4, 9, 'Supakorn Rojananin', 'Undergraduate', '0835549087'),
+('6132404074', 'Miss', 'Suvichaya', 'Sriprapaporne', 'School of Sinology', 'Chinese Language and Culture', 3.65, 11, 'Teeraparp Predeepoch', 'Undergraduate', '0813873280'),
+('6232301029', 'Mr.', 'Sanphet', 'Lakhasak', 'School of Social Innovation', 'International Development', 5, 10, 'Bow wee', 'Undergraduate', '0856652221');
 
 --
 -- Indexes for dumped tables
@@ -284,13 +295,13 @@ ALTER TABLE `student_detail`
 -- AUTO_INCREMENT for table `advisor`
 --
 ALTER TABLE `advisor`
-  MODIFY `AD_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `AD_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `input_form`
 --
 ALTER TABLE `input_form`
-  MODIFY `FORM_NO` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `FORM_NO` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- Constraints for dumped tables

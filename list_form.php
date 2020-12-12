@@ -58,16 +58,16 @@ require_once "connectdb.php";
                                 </div>
                                 <br><br>
                                 <div class="allform">
-                                        <div class="row mt-2 mb-2">
+                                        <!--<div class="row mt-2 mb-2">
 
                                                 <div class="newform col" style="font-family:ConcertOne;">
                                                         <a href="reg211.php"><button class="btnewform btn btn-primary btn-block" type="button" style="font-size:calc(0.5rem + 0.5vw);">NEW FORM</button></a>
                                                 </div>
 
-                                        </div>
+                                        </div>-->
                                         <br>
                                         <div class="bgtable">
-                                                <div class="table-responsive-sm">
+                                                <div class="table-responsive-lg">
                                                         <table class="table table-bordered table-striped" style="font-family: ConcertOne;">
                                                                 <thead class="table-warning">
                                                                         <tr>
