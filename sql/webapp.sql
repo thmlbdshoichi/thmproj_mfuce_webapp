@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2020 at 06:02 PM
+-- Generation Time: Dec 13, 2020 at 07:29 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -65,7 +65,8 @@ INSERT INTO `advisor` (`AD_ID`, `AD_FNAME`, `AD_LNAME`, `SCHOOL_ID`, `isDean`) V
 (23, 'Chomnard', 'Potjanamart', 8, 1),
 (24, 'Narong', 'Lumbikanonda', 10, 1),
 (25, 'Siriporn', 'Wajjwalku', 11, 1),
-(26, 'Sulukkana', 'Noiprasert', 13, 1);
+(26, 'Sulukkana', 'Noiprasert', 13, 1),
+(27, 'Saroat', 'Nittayasang', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -98,11 +99,11 @@ CREATE TABLE `input_form` (
 --
 
 INSERT INTO `input_form` (`FORM_NO`, `DATE`, `SEMESTER`, `ACADEMIC_YEAR`, `ST_ID`, `PREFIX`, `FIRST_NAME`, `LAST_NAME`, `ST_LEVEL`, `DEAN`, `SCHOOL`, `PROGRAM`, `PHONE_NUMBER`, `REASONS`, `COURSE_CODE`, `COURSE_TITLE`, `OTHER_EXPLAIN`) VALUES
-(62, '2020-11-29', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'Other Reason', '', '', 'Internship aboard will be back soon na kub'),
+(62, '2020-11-29', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'Other Reason', '', '', 'In progess of Internship aboard'),
 (65, '2020-11-29', 'Summer', 2020, '6132101009', 'Miss', 'Boonraksa', 'Panyadee ', 'Undergraduate', 'School of Medicine', 'School of Medicine', 'Medicine', '0835549087', 'Other Reason', '', '', 'In progess of internship in Hospital'),
 (67, '2020-11-25', 'Summer', 2020, '6131112016', 'Mr.', 'Anukoon', 'Charoendee ', 'Undergraduate', 'School of Science', 'School of Science', 'Materials Engineering', '0829691123', 'Other Reason', '', '', 'In progess of internship to England'),
 (68, '2020-11-29', 'First', 2020, '6131501035', 'Mr.', 'Piya', 'Jairat ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0871412555', 'In progess', '1501312', 'Web Application Development', ''),
-(80, '2020-12-12', 'Summer', 2020, '6131501065', 'Miss', 'Apichaya', 'Sainak', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0829014785', 'In progess', '1501020', 'Web Application Analysis', '');
+(87, '2020-12-13', 'Second', 2020, '5832101013', 'Miss', 'Pichaya', 'Inkham', 'Undergraduate', 'School of Medicine', 'School of Medicine', 'Medicine', '0873563236', 'In progess', '1501312', 'Hello', '');
 
 -- --------------------------------------------------------
 
@@ -217,11 +218,12 @@ INSERT INTO `student_detail` (`ST_ID`, `PREFIX`, `F_NAME`, `L_NAME`, `SCHOOL_NAM
 ('4751011008', 'Mrs.', 'Ussamanee', 'Chomphubool', 'School of Liberal Arts', 'Arts Program in English', 4, 13, 'Jiraporn Intrasai', 'Graduate', '0813589920'),
 ('4831501034', 'Mr.', 'Pharuhat', 'Boonchomphu', 'School of Information Technology', 'Computer Engineering', 3.43, 8, 'Teeravisit Laohapensaeng', 'Graduate', '0845861792'),
 ('5131210001', 'Miss', 'Kanokwanasa', 'Chomphubool', 'School of Management', 'Aviation Business Management', 4, 12, 'Chatrudee Jongsureyapart', 'Graduate', '0859592240'),
+('5832101013', 'Miss', 'Pichaya', 'Inkham', 'School of Medicine', 'Medicine', 4, 16, 'SupakornRojananin', 'Undergraduate', '0873563236'),
 ('6131112016', 'Mr.', 'Anukoon', 'Charoendee', 'School of Science', 'Materials Engineering', 4, 7, 'Uraiwan Intatha', 'Undergraduate', '0829691123'),
 ('6131501016', 'Miss', 'Natthida', 'Patlee', 'School of Information Technology', 'Computer Engineering', 3.95, 3, 'Teeravisit Laohapensaeng', 'Undergraduate', '0821234555'),
 ('6131501035', 'Mr.', 'Piya', 'Jairat', 'School of Information Technology', 'Computer Engineering', 3.41, 1, 'Teeravisit Laohapensaeng', 'Undergraduate', '0871412555'),
 ('6131501054', 'Miss', 'Wirakan', 'Keawkanya', 'School of Information Technology', 'Computer Engineering', 3.82, 2, 'Teeravisit Laohapensaeng', 'Undergraduate', '0895025418'),
-('6131501065', 'Miss', 'Apichaya', 'Sainak', 'School of Information Technology', 'Computer Engineering', 4, 8, 'Teeravisit  Laohapensaeng', 'Undergraduate', '0829014785'),
+('6131501065', 'Miss', 'Apichaya', 'Sainak', 'School of Information Technology', 'Computer Engineering', 4, 8, 'Teeravisit Laohapensaeng', 'Undergraduate', '0873563255'),
 ('6131501066', 'Mr.', 'Arunwat', 'Moonbung', 'School of Information Technology', 'Computer Engineering', 4, 8, 'Teeravisit Laohapensaeng', 'Undergraduate', '0877892840'),
 ('6132101009', 'Miss', 'Boonraksa', 'Panyadee', 'School of Medicine', 'Medicine', 4, 9, 'Supakorn Rojananin', 'Undergraduate', '0835549087'),
 ('6132404074', 'Miss', 'Suvichaya', 'Sriprapaporne', 'School of Sinology', 'Chinese Language and Culture', 3.65, 11, 'Teeraparp Predeepoch', 'Undergraduate', '0813873280'),
@@ -279,13 +281,13 @@ ALTER TABLE `student_detail`
 -- AUTO_INCREMENT for table `advisor`
 --
 ALTER TABLE `advisor`
-  MODIFY `AD_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `AD_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `input_form`
 --
 ALTER TABLE `input_form`
-  MODIFY `FORM_NO` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `FORM_NO` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- Constraints for dumped tables
