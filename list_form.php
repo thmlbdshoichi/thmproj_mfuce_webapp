@@ -20,7 +20,14 @@ require_once "connectdb.php";
         <div class="fullscreen">
 
                 <?php
-                $checkback = $_POST['check'];
+
+                if (!empty($_POST['check']))
+                {
+                        $checkback = $_POST['check'];
+                }
+                else{
+                        $checkback = NULL;
+                }
 
                 if (!empty($_POST['STUDENT_ID'])) {
                         $STUDENT_ID = $_POST['STUDENT_ID'];

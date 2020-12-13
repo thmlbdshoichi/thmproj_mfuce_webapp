@@ -16,7 +16,9 @@ else{
 
     $sql_delete = "DELETE FROM input_form WHERE FORM_NO = $FORM_NO";
     $result_delete = mysqli_query($conn,$sql_delete);
+?>
 
+<?php
     if (!$result_delete){
         die('Error: ' . mysqli_error($conn));
     }
