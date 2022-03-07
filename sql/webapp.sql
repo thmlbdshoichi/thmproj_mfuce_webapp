@@ -40,33 +40,7 @@ CREATE TABLE `advisor` (
 --
 
 INSERT INTO `advisor` (`AD_ID`, `AD_FNAME`, `AD_LNAME`, `SCHOOL_ID`, `isDean`) VALUES
-(1, 'Tossapon ', 'Boongoen', 1, 0),
-(2, 'Teeravisit ', 'Laohapensaeng', 1, 1),
-(3, 'Mahamah ', 'Sebakor', 1, 0),
-(4, 'Punnarumol ', 'Temdee', 1, 0),
-(5, 'Chayapol', 'Kamyod', 1, 0),
-(6, 'Thanyatorn', 'Saipanya ', 4, 0),
-(7, 'Panate', 'Manomaiwiboon', 2, 0),
-(8, 'Roungsan', 'Chaisricharoen', 1, 0),
-(9, 'Patcharin', 'Pingmuangkaew', 9, 0),
-(10, 'Fabio ', 'Calzolari', 11, 0),
-(11, 'Apirak', 'Nusitchaiyakarn', 12, 0),
-(12, 'Noraset', 'Polsin', 4, 0),
-(13, 'Phanintra', 'Teeranon', 14, 0),
-(14, 'Jiraporn', 'Intrasai', 14, 1),
-(15, 'Uraiwan', 'Intatha', 2, 1),
-(16, 'Supakorn', 'Rojananin', 9, 1),
-(17, 'Teeraparp', 'Predeepoch', 12, 1),
-(18, 'Chatrudee', 'Jongsureyapart', 4, 1),
-(19, 'Saroat', 'Rawdkuen', 5, 1),
-(20, 'Rung', 'Srisomwong', 3, 1),
-(21, 'Phanupong', 'Chaiwut', 6, 1),
-(22, 'Rachanee', 'Sunsern', 7, 1),
-(23, 'Chomnard', 'Potjanamart', 8, 1),
-(24, 'Narong', 'Lumbikanonda', 10, 1),
-(25, 'Siriporn', 'Wajjwalku', 11, 1),
-(26, 'Sulukkana', 'Noiprasert', 13, 1),
-(27, 'Saroat', 'Nittayasang', 2, 0);
+(1, 'John ', 'ProfDoe', 1, 0),
 
 -- --------------------------------------------------------
 
@@ -94,17 +68,6 @@ CREATE TABLE `input_form` (
   `OTHER_EXPLAIN` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `input_form`
---
-
-INSERT INTO `input_form` (`FORM_NO`, `DATE`, `SEMESTER`, `ACADEMIC_YEAR`, `ST_ID`, `PREFIX`, `FIRST_NAME`, `LAST_NAME`, `ST_LEVEL`, `DEAN`, `SCHOOL`, `PROGRAM`, `PHONE_NUMBER`, `REASONS`, `COURSE_CODE`, `COURSE_TITLE`, `OTHER_EXPLAIN`) VALUES
-(62, '2020-11-29', 'Summer', 2020, '6131501066', 'Mr.', 'Arunwat', 'Moonbung ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0877892840', 'Other Reason', '', '', 'In progess of Internship aboard'),
-(65, '2020-11-29', 'Summer', 2020, '6132101009', 'Miss', 'Boonraksa', 'Panyadee ', 'Undergraduate', 'School of Medicine', 'School of Medicine', 'Medicine', '0835549087', 'Other Reason', '', '', 'In progess of internship in Hospital'),
-(67, '2020-11-25', 'Summer', 2020, '6131112016', 'Mr.', 'Anukoon', 'Charoendee ', 'Undergraduate', 'School of Science', 'School of Science', 'Materials Engineering', '0829691123', 'Other Reason', '', '', 'In progess of internship to England'),
-(68, '2020-11-29', 'First', 2020, '6131501035', 'Mr.', 'Piya', 'Jairat ', 'Undergraduate', 'School of Information Technology', 'School of Information Technology', 'Computer Engineering', '0871412555', 'In progess', '1501312', 'Web Application Development', '');
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `program`
@@ -214,18 +177,7 @@ CREATE TABLE `student_detail` (
 --
 
 INSERT INTO `student_detail` (`ST_ID`, `PREFIX`, `F_NAME`, `L_NAME`, `SCHOOL_NAME`, `PRO_NAME`, `GPAX`, `AD_ID`, `DEAN`, `STATUS`, `PHONE_NO`) VALUES
-('4751011008', 'Mrs.', 'Ussamanee', 'Chomphubool', 'School of Liberal Arts', 'Arts Program in English', 4, 13, 'Jiraporn Intrasai', 'Graduate', '0813589920'),
-('4831501034', 'Mr.', 'Pharuhat', 'Boonchomphu', 'School of Information Technology', 'Computer Engineering', 3.43, 8, 'Teeravisit Laohapensaeng', 'Graduate', '0845861792'),
-('5131210001', 'Miss', 'Kanokwanasa', 'Chomphubool', 'School of Management', 'Aviation Business Management', 4, 12, 'Chatrudee Jongsureyapart', 'Graduate', '0859592240'),
-('6131112016', 'Mr.', 'Anukoon', 'Charoendee', 'School of Science', 'Materials Engineering', 4, 7, 'Uraiwan Intatha', 'Undergraduate', '0829691123'),
-('6131501016', 'Miss', 'Natthida', 'Patlee', 'School of Information Technology', 'Computer Engineering', 3.95, 3, 'Teeravisit Laohapensaeng', 'Undergraduate', '0821234555'),
-('6131501035', 'Mr.', 'Piya', 'Jairat', 'School of Information Technology', 'Computer Engineering', 3.41, 1, 'Teeravisit Laohapensaeng', 'Undergraduate', '0871412555'),
-('6131501054', 'Miss', 'Wirakan', 'Keawkanya', 'School of Information Technology', 'Computer Engineering', 3.82, 2, 'Teeravisit Laohapensaeng', 'Undergraduate', '0895025418'),
-('6131501065', 'Miss', 'Apichaya', 'Sainak', 'School of Information Technology', 'Computer Engineering', 4, 8, 'Teeravisit Laohapensaeng', 'Undergraduate', '0873563255'),
-('6131501066', 'Mr.', 'Arunwat', 'Moonbung', 'School of Information Technology', 'Computer Engineering', 4, 8, 'Teeravisit Laohapensaeng', 'Undergraduate', '0877892840'),
-('6132101009', 'Miss', 'Boonraksa', 'Panyadee', 'School of Medicine', 'Medicine', 4, 9, 'Supakorn Rojananin', 'Undergraduate', '0835549087'),
-('6132404074', 'Miss', 'Suvichaya', 'Sriprapaporne', 'School of Sinology', 'Chinese Language and Culture', 3.65, 11, 'Teeraparp Predeepoch', 'Undergraduate', '0813873280'),
-('6232301029', 'Mr.', 'Sanphet', 'Lakhasak', 'School of Social Innovation', 'International Development', 5, 10, 'Bow wee', 'Undergraduate', '0856652221');
+('4751011008', 'Mrs.', 'Jane', 'Doe', 'School of Liberal Arts', 'Arts Program in English', 4, 13, 'John Profdoe', 'Graduate', '0811111111'),
 
 --
 -- Indexes for dumped tables
